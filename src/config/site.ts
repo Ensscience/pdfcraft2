@@ -2,15 +2,15 @@
  * Site configuration
  */
 export const siteConfig = {
-  name: 'PDFCraft',
+  name: 'YesConvert',
   description: 'Professional PDF Tools - Free, Private & Browser-Based. Merge, split, compress, convert, and edit PDF files online without uploading to servers.',
-  url: 'https://pdfcraft.devtoolcafe.com',
+  url: 'https://yesconvert.com',
   ogImage: '/images/og-image.png',
   links: {
     github: 'https://github.com/PDFCraftTool/pdfcraft',
     twitter: 'https://twitter.com/pdfcraft',
   },
-  creator: 'PDFCraft Team',
+  creator: 'Ahmed Chouib',
   keywords: [
     'PDF tools',
     'PDF editor',
@@ -25,8 +25,8 @@ export const siteConfig = {
   ],
   // SEO-related settings
   seo: {
-    titleTemplate: '%s | PDFCraft',
-    defaultTitle: 'PDFCraft - Professional PDF Tools',
+    titleTemplate: '%s | YesConvert',
+    defaultTitle: 'YesConvert - Free Online PDF & File Converter',
     twitterHandle: '@pdfcraft',
     locale: 'en_US',
   },
