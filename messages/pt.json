@@ -1,7 +1,7 @@
 {
   "metadata": {
     "home": {
-      "title": "PDFCraft - Ferramentas PDF Profissionais",
+      "title": "YesConvert - Ferramentas PDF Profissionais",
       "description": "Grátis, privado e baseado em navegador. Mescle e edite arquivos PDF online sem enviar para servidores."
     },
     "tools": {
@@ -10,19 +10,19 @@
     },
     "about": {
       "title": "Sobre Nós",
-      "description": "Conheça o PDFCraft - seu kit de ferramentas PDF gratuito, privado e poderoso. Todo o processamento acontece no seu navegador."
+      "description": "Conheça o YesConvert - seu kit de ferramentas PDF gratuito, privado e poderoso. Todo o processamento acontece no seu navegador."
     },
     "faq": {
       "title": "Perguntas Frequentes",
-      "description": "Encontre respostas para perguntas comuns sobre o PDFCraft. Aprenda a usar nossas ferramentas PDF de forma eficaz."
+      "description": "Encontre respostas para perguntas comuns sobre o YesConvert. Aprenda a usar nossas ferramentas PDF de forma eficaz."
     },
     "privacy": {
       "title": "Política de Privacidade",
-      "description": "Política de privacidade do PDFCraft. Seus arquivos nunca saem do seu dispositivo - todo o processamento acontece localmente no seu navegador."
+      "description": "Política de privacidade do YesConvert. Seus arquivos nunca saem do seu dispositivo - todo o processamento acontece localmente no seu navegador."
     },
     "contact": {
       "title": "Contato",
-      "description": "Entre em contato com a equipe do PDFCraft. Adoraríamos ouvir você."
+      "description": "Entre em contato com a equipe do YesConvert. Adoraríamos ouvir você."
     },
     "keywords": {
       "pdfTools": "ferramentas PDF",
@@ -35,7 +35,7 @@
     }
   },
   "common": {
-    "brand": "PDFCraft",
+    "brand": "YesConvert",
     "tagline": "Ferramentas PDF Profissionais - Grátis e Privadas",
     "navigation": {
       "home": "Início",
@@ -83,9 +83,9 @@
       "loading": "Carregando..."
     },
     "footer": {
-      "copyright": "© {year} PDFCraft. Todos os direitos reservados.",
+      "copyright": "© {year} YesConvert. Todos os direitos reservados.",
       "privacyBadge": "100% Privado - Os arquivos nunca saem do seu dispositivo",
-      "footer": "© 2025 PDFCraft. Todos os direitos reservados.",
+      "footer": "© 2025 YesConvert. Todos os direitos reservados.",
       "madeWith": "Feito com <Heart /> e <Nextjs />"
     },
     "recentFiles": {
@@ -129,7 +129,7 @@
       "finish": "Finalizar",
       "skip": "Pular",
       "stepOf": "de",
-      "welcomeTitle": "Bem-vindo ao PDFCraft!",
+      "welcomeTitle": "Bem-vindo ao YesConvert!",
       "welcomeMessage": "Gostaria de um tour rápido para aprender a usar nossas ferramentas PDF? Leva apenas um minuto.",
       "helpButton": "Tour de Ajuda"
     },
@@ -156,16 +156,16 @@
       "sections": {
         "general": {
           "whatIs": {
-            "question": "O que é o PDFCraft?",
-            "answer": "O PDFCraft é um conjunto de ferramentas PDF gratuito e focado na privacidade que funciona inteiramente no seu navegador. Ele oferece mais de 67 ferramentas profissionais para editar, converter, mesclar, dividir e proteger arquivos PDF sem enviá-los para nenhum servidor."
+            "question": "O que é o YesConvert?",
+            "answer": "O YesConvert é um conjunto de ferramentas PDF gratuito e focado na privacidade que funciona inteiramente no seu navegador. Ele oferece mais de 67 ferramentas profissionais para editar, converter, mesclar, dividir e proteger arquivos PDF sem enviá-los para nenhum servidor."
           },
           "isFree": {
-            "question": "O PDFCraft é realmente gratuito?",
-            "answer": "Sim, o PDFCraft é totalmente gratuito. Não há custos ocultos, planos premium ou necessidade de cadastro. Todos os recursos estão disponíveis para todos."
+            "question": "O YesConvert é realmente gratuito?",
+            "answer": "Sim, o YesConvert é totalmente gratuito. Não há custos ocultos, planos premium ou necessidade de cadastro. Todos os recursos estão disponíveis para todos."
           },
           "account": {
             "question": "Preciso criar uma conta?",
-            "answer": "Não, você não precisa criar uma conta nem se cadastrar para usar o PDFCraft. Basta acessar o site e começar a usar qualquer ferramenta imediatamente."
+            "answer": "Não, você não precisa criar uma conta nem se cadastrar para usar o YesConvert. Basta acessar o site e começar a usar qualquer ferramenta imediatamente."
           }
         },
         "privacy": {
@@ -174,8 +174,8 @@
             "answer": "Não, seus arquivos nunca são enviados para nenhum servidor. Todo o processamento de PDF acontece localmente no seu navegador usando JavaScript e WebAssembly. Seus arquivos nunca saem do seu dispositivo."
           },
           "safe": {
-            "question": "É seguro usar o PDFCraft com documentos sensíveis?",
-            "answer": "Sim, o PDFCraft foi projetado com foco em privacidade. Como todo o processamento acontece localmente no navegador, seus documentos sensíveis permanecem no seu dispositivo e nunca são transmitidos pela internet."
+            "question": "É seguro usar o YesConvert com documentos sensíveis?",
+            "answer": "Sim, o YesConvert foi projetado com foco em privacidade. Como todo o processamento acontece localmente no navegador, seus documentos sensíveis permanecem no seu dispositivo e nunca são transmitidos pela internet."
           },
           "storage": {
             "question": "O que acontece com meus arquivos após o processamento?",
@@ -185,7 +185,7 @@
         "features": {
           "operations": {
             "question": "Quais operações de PDF posso realizar?",
-            "answer": "O PDFCraft oferece mais de 67 ferramentas, incluindo: mesclar, dividir, comprimir, converter (de/para imagens, texto, JSON), editar, anotar, assinar, adicionar marcas d'água, criptografar/descriptografar, OCR e muito mais."
+            "answer": "O YesConvert oferece mais de 67 ferramentas, incluindo: mesclar, dividir, comprimir, converter (de/para imagens, texto, JSON), editar, anotar, assinar, adicionar marcas d'água, criptografar/descriptografar, OCR e muito mais."
           },
           "merge": {
             "question": "Posso mesclar vários arquivos PDF?",
@@ -193,17 +193,17 @@
           },
           "images": {
             "question": "Posso converter imagens em PDF?",
-            "answer": "Sim, o PDFCraft suporta a conversão de vários formatos de imagem (JPG, PNG, WebP, BMP, TIFF, SVG, HEIC) para PDF. Você pode converter uma ou várias imagens de uma vez."
+            "answer": "Sim, o YesConvert suporta a conversão de vários formatos de imagem (JPG, PNG, WebP, BMP, TIFF, SVG, HEIC) para PDF. Você pode converter uma ou várias imagens de uma vez."
           },
           "edit": {
             "question": "Posso editar texto em um PDF?",
-            "answer": "O PDFCraft oferece ferramentas de anotação e edição, incluindo destaque, adição de texto, formas, imagens e assinaturas. Para edição completa de texto, a ferramenta Editor de PDF oferece recursos abrangentes de anotação."
+            "answer": "O YesConvert oferece ferramentas de anotação e edição, incluindo destaque, adição de texto, formas, imagens e assinaturas. Para edição completa de texto, a ferramenta Editor de PDF oferece recursos abrangentes de anotação."
           }
         },
         "technical": {
           "browsers": {
             "question": "Quais navegadores são suportados?",
-            "answer": "O PDFCraft funciona em todos os navegadores modernos, incluindo Chrome, Firefox, Safari e Edge. Recomendamos usar a versão mais recente do seu navegador para obter a melhor experiência."
+            "answer": "O YesConvert funciona em todos os navegadores modernos, incluindo Chrome, Firefox, Safari e Edge. Recomendamos usar a versão mais recente do seu navegador para obter a melhor experiência."
           },
           "sizeLimit": {
             "question": "Existe limite de tamanho de arquivo?",
@@ -214,14 +214,14 @@
             "answer": "Como todo o processamento acontece no navegador, o desempenho depende da capacidade do seu dispositivo. Arquivos grandes exigem mais memória e poder de processamento. Para melhores resultados, feche outras abas e aplicativos."
           },
           "offline": {
-            "question": "O PDFCraft funciona offline?",
-            "answer": "Atualmente, o PDFCraft requer conexão com a internet para carregar o aplicativo. Porém, depois de carregado, o processamento de PDF acontece localmente e não exige conexão."
+            "question": "O YesConvert funciona offline?",
+            "answer": "Atualmente, o YesConvert requer conexão com a internet para carregar o aplicativo. Porém, depois de carregado, o processamento de PDF acontece localmente e não exige conexão."
           }
         },
         "languages": {
           "supported": {
             "question": "Quais idiomas são suportados?",
-            "answer": "O PDFCraft está disponível em 9 idiomas: Inglês, Japonês, Coreano, Espanhol, Francês, Alemão, Chinês, Português e Árabe (com suporte RTL)."
+            "answer": "O YesConvert está disponível em 9 idiomas: Inglês, Japonês, Coreano, Espanhol, Francês, Alemão, Chinês, Português e Árabe (com suporte RTL)."
           },
           "change": {
             "question": "Como altero o idioma?",
@@ -252,7 +252,7 @@
         },
         "fast": {
           "title": "Rápido e Eficiente",
-          "description": "Impulsionado por tecnologias web modernas, o PDFCraft oferece processamento de PDF extremamente rápido sem necessidade de uploads ou downloads."
+          "description": "Impulsionado por tecnologias web modernas, o YesConvert oferece processamento de PDF extremamente rápido sem necessidade de uploads ou downloads."
         },
         "accessible": {
           "title": "Acessível em Qualquer Lugar",
@@ -260,7 +260,7 @@
         },
         "free": {
           "title": "Gratuito para Sempre",
-          "description": "O PDFCraft é totalmente gratuito, sem custos ocultos, sem necessidade de cadastro e sem limites de uso."
+          "description": "O YesConvert é totalmente gratuito, sem custos ocultos, sem necessidade de cadastro e sem limites de uso."
         },
         "openSource": {
           "title": "Código Aberto",
@@ -298,7 +298,7 @@
         "email": {
           "title": "Email",
           "description": "Envie-nos um email e responderemos dentro de 24-48 horas.",
-          "action": "contact@pdfcraft.app"
+          "action": "ensscience@gmail.com"
         },
         "github": {
           "title": "GitHub",
@@ -308,7 +308,7 @@
         "twitter": {
           "title": "Twitter",
           "description": "Siga-nos para atualizações e anúncios.",
-          "action": "@pdfcraft"
+          "action": "@dzairprofs"
         }
       },
       "form": {
@@ -459,7 +459,7 @@
   "workflow": {
     "title": "Editor de Fluxo de Trabalho PDF",
     "subtitle": "Crie pipelines de processamento PDF personalizados conectando ferramentas",
-    "metaTitle": "Editor de Fluxo de Trabalho PDF - PDFCraft",
+    "metaTitle": "Editor de Fluxo de Trabalho PDF - YesConvert",
     "metaDescription": "Crie pipelines de processamento PDF personalizados conectando ferramentas visualmente. Construa, salve e reutilize seus fluxos de trabalho.",
     "toolbox": "Caixa de Ferramentas",
     "dragToAdd": "Arraste ferramentas para adicionar ao fluxo de trabalho",
@@ -2188,16 +2188,16 @@
     "sections": {
       "general": {
         "whatIs": {
-          "question": "O que é o PDFCraft?",
-          "answer": "O PDFCraft é um conjunto de ferramentas PDF gratuito e focado na privacidade que funciona inteiramente no seu navegador. Ele oferece mais de {count} ferramentas profissionais para editar, converter, mesclar, dividir e criptografar arquivos PDF sem nunca enviá-los para um servidor."
+          "question": "O que é o YesConvert?",
+          "answer": "O YesConvert é um conjunto de ferramentas PDF gratuito e focado na privacidade que funciona inteiramente no seu navegador. Ele oferece mais de {count} ferramentas profissionais para editar, converter, mesclar, dividir e criptografar arquivos PDF sem nunca enviá-los para um servidor."
         },
         "isFree": {
-          "question": "O PDFCraft é realmente gratuito?",
-          "answer": "Sim, o PDFCraft é totalmente gratuito. Não há taxas ocultas, assinaturas premium ou obrigatoriedade de registro. Todos os recursos estão disponíveis para todos."
+          "question": "O YesConvert é realmente gratuito?",
+          "answer": "Sim, o YesConvert é totalmente gratuito. Não há taxas ocultas, assinaturas premium ou obrigatoriedade de registro. Todos os recursos estão disponíveis para todos."
         },
         "account": {
           "question": "Preciso criar uma conta?",
-          "answer": "Não, você não precisa criar uma conta ou se registrar para usar o PDFCraft. Basta visitar o site e começar a usar qualquer ferramenta imediatamente."
+          "answer": "Não, você não precisa criar uma conta ou se registrar para usar o YesConvert. Basta visitar o site e começar a usar qualquer ferramenta imediatamente."
         }
       },
       "privacy": {
@@ -2206,8 +2206,8 @@
           "answer": "Não, seus arquivos nunca são enviados para um servidor. Todo o processamento de PDF é feito localmente no seu navegador usando JavaScript e WebAssembly. Seus arquivos nunca saem do seu dispositivo."
         },
         "safe": {
-          "question": "É seguro usar o PDFCraft para documentos sensíveis?",
-          "answer": "Sim, o PDFCraft foi projetado com a privacidade como prioridade. Como todo o processamento ocorre localmente no seu navegador, seus documentos sensíveis permanecem no seu dispositivo e nunca são transmitidos pela Internet."
+          "question": "É seguro usar o YesConvert para documentos sensíveis?",
+          "answer": "Sim, o YesConvert foi projetado com a privacidade como prioridade. Como todo o processamento ocorre localmente no seu navegador, seus documentos sensíveis permanecem no seu dispositivo e nunca são transmitidos pela Internet."
         },
         "storage": {
           "question": "O que acontece com meus arquivos após o processamento?",
@@ -2217,7 +2217,7 @@
       "features": {
         "operations": {
           "question": "Quais operações de PDF posso realizar?",
-          "answer": "O PDFCraft oferece mais de {count} ferramentas, incluindo: mesclar, dividir, comprimir, converter (de/para imagens, texto, JSON), editar, anotar, assinar, adicionar marcas d'água, criptografar/descriptografar, OCR e muito mais."
+          "answer": "O YesConvert oferece mais de {count} ferramentas, incluindo: mesclar, dividir, comprimir, converter (de/para imagens, texto, JSON), editar, anotar, assinar, adicionar marcas d'água, criptografar/descriptografar, OCR e muito mais."
         },
         "merge": {
           "question": "Posso mesclar vários arquivos PDF?",
@@ -2225,17 +2225,17 @@
         },
         "images": {
           "question": "Posso converter imagens em PDF?",
-          "answer": "Sim, o PDFCraft suporta a conversão de vários formatos de imagem (JPG, PNG, WebP, BMP, TIFF, SVG, HEIC) para PDF. Você pode converter uma ou várias imagens de uma vez."
+          "answer": "Sim, o YesConvert suporta a conversão de vários formatos de imagem (JPG, PNG, WebP, BMP, TIFF, SVG, HEIC) para PDF. Você pode converter uma ou várias imagens de uma vez."
         },
         "edit": {
           "question": "Posso editar o texto de um PDF?",
-          "answer": "O PDFCraft oferece ferramentas de anotação e edição que incluem destaque, adição de texto, formas, imagens e assinaturas. Para edição completa de texto, a ferramenta Editor de PDF fornece funcionalidades abrangentes de anotação."
+          "answer": "O YesConvert oferece ferramentas de anotação e edição que incluem destaque, adição de texto, formas, imagens e assinaturas. Para edição completa de texto, a ferramenta Editor de PDF fornece funcionalidades abrangentes de anotação."
         }
       },
       "technical": {
         "browsers": {
           "question": "Quais navegadores são suportados?",
-          "answer": "O PDFCraft funciona em todos os navegadores modernos, incluindo Chrome, Firefox, Safari e Edge. Recomendamos o uso da versão mais recente do seu navegador para uma melhor experiência."
+          "answer": "O YesConvert funciona em todos os navegadores modernos, incluindo Chrome, Firefox, Safari e Edge. Recomendamos o uso da versão mais recente do seu navegador para uma melhor experiência."
         },
         "sizeLimit": {
           "question": "Existe um limite de tamanho de arquivo?",
@@ -2246,14 +2246,14 @@
           "answer": "Como todo o processamento é feito no navegador, o desempenho depende das capacidades do seu dispositivo. Arquivos grandes exigem mais memória e poder de processamento. Para melhores resultados, feche outras abas e aplicativos."
         },
         "offline": {
-          "question": "O PDFCraft funciona offline?",
-          "answer": "Atualmente, o PDFCraft requer uma conexão com a Internet para carregar o aplicativo inicialmente. No entanto, uma vez carregado, o processamento de PDF ocorre localmente e não requer conexão."
+          "question": "O YesConvert funciona offline?",
+          "answer": "Atualmente, o YesConvert requer uma conexão com a Internet para carregar o aplicativo inicialmente. No entanto, uma vez carregado, o processamento de PDF ocorre localmente e não requer conexão."
         }
       },
       "languages": {
         "supported": {
           "question": "Quais idiomas são suportados?",
-          "answer": "O PDFCraft está disponível em 9 idiomas: Inglês, Japonês, Coreano, Espanhol, Francês, Alemão, Chinês, Português e Árabe (com suporte para leitura da direita para a esquerda)."
+          "answer": "O YesConvert está disponível em 9 idiomas: Inglês, Japonês, Coreano, Espanhol, Francês, Alemão, Chinês, Português e Árabe (com suporte para leitura da direita para a esquerda)."
         },
         "change": {
           "question": "Como posso mudar o idioma?",
@@ -2284,7 +2284,7 @@
       },
       "fast": {
         "title": "Rápido e Eficiente",
-        "description": "Impulsionado por tecnologias web modernas, o PDFCraft oferece processamento de PDF extremamente rápido sem a necessidade de uploads ou downloads."
+        "description": "Impulsionado por tecnologias web modernas, o YesConvert oferece processamento de PDF extremamente rápido sem a necessidade de uploads ou downloads."
       },
       "accessible": {
         "title": "Acessível em Qualquer Lugar",
@@ -2292,7 +2292,7 @@
       },
       "free": {
         "title": "Gratuito para Sempre",
-        "description": "O PDFCraft é totalmente gratuito para usar, sem custos ocultos, sem necessidade de registro e sem limites de uso."
+        "description": "O YesConvert é totalmente gratuito para usar, sem custos ocultos, sem necessidade de registro e sem limites de uso."
       },
       "openSource": {
         "title": "Código Aberto",
@@ -2330,7 +2330,7 @@
       "email": {
         "title": "E-mail",
         "description": "Envie-nos um e-mail e responderemos dentro de 24 a 48 horas.",
-        "action": "contact@pdfcraft.app"
+        "action": "ensscience@gmail.com"
       },
       "github": {
         "title": "GitHub",
@@ -2340,7 +2340,7 @@
       "twitter": {
         "title": "Twitter",
         "description": "Siga-nos para atualizações e anúncios.",
-        "action": "@pdfcraft"
+        "action": "@dzairprofs"
       }
     },
     "form": {
