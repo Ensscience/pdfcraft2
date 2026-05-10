@@ -180,22 +180,21 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
               className="group flex items-center gap-2.5 text-xl font-bold text-[hsl(var(--color-foreground))] hover:opacity-90 transition-opacity"
               aria-label={`${t('brand')} - ${t('navigation.home')}`}
             >
-              <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[hsl(var(--color-primary))] to-[hsl(var(--color-accent))] shadow-lg shadow-primary/25 transition-transform group-hover:scale-105">
+              <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[#38bdf8] shadow-lg shadow-sky-400/30 transition-transform group-hover:scale-105">
                 <svg
                   className="h-5 w-5 text-white"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2.5"
+                  strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                  <polyline points="14 2 14 8 20 8" />
+                  <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-              <span className="text-xl tracking-tight" data-testid="brand-name">
-                {t('brand')}
+              <span className="text-xl tracking-tight font-bold" data-testid="brand-name">
+                <span className="text-[#38bdf8]">Yes</span>Convert
               </span>
             </Link>
           </div>
