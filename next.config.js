@@ -82,7 +82,7 @@ const nextConfig = {
   },
 
   // Trailing slash for static hosting compatibility
-  trailingSlash: true,
+  trailingSlash: false,
 
   // Strict mode for better development experience
   reactStrictMode: true,
