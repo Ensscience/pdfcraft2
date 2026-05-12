@@ -39,6 +39,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-background text-foreground antialiased">
         {children}
+        <script defer src="/_vercel/insights/script.js"></script>
       </body>
     </html>
   );
