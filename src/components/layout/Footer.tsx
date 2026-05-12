@@ -37,10 +37,13 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
       role="contentinfo"
     >
       {/* Domain for Sale Banner */}
-      <div className="w-full bg-gradient-to-r from-[#0ea5e9] via-[#38bdf8] to-[#0ea5e9] py-3 px-4 mb-8">
+      <div className="w-full bg-gradient-to-r from-[#0ea5e9] via-[#FF2800] to-[#0ea5e9] py-3 px-4 mb-8">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-white text-center">
           <div className="flex items-center gap-2 font-bold text-lg">
-            <span>🏷️</span>
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+              <line x1="7" y1="7" x2="7.01" y2="7"/>
+            </svg>
             <span>This domain is for sale!</span>
           </div>
           <span className="hidden sm:block opacity-60">·</span>
@@ -63,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
               className="group flex items-center gap-2.5 text-xl font-bold text-[hsl(var(--color-foreground))]"
               aria-label={`${t('brand')} - ${t('navigation.home')}`}
             >
-              <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-[#38bdf8] text-white shadow-md shadow-sky-400/30 transition-transform group-hover:scale-105">
+              <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-[#FF2800] text-white shadow-md shadow-red-500/30 transition-transform group-hover:scale-105">
                 <svg
                   className="h-5 w-5"
                   viewBox="0 0 24 24"
@@ -77,7 +80,7 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
                 </svg>
               </div>
               <span data-testid="footer-brand-name">
-                <span className="text-[#38bdf8]">Yes</span>Convert
+                <span className="text-[#FF2800]">Yes</span>Convert
               </span>
             </Link>
             <p className="text-sm text-[hsl(var(--color-muted-foreground))] leading-relaxed max-w-xs">

@@ -180,7 +180,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
               className="group flex items-center gap-2.5 text-xl font-bold text-[hsl(var(--color-foreground))] hover:opacity-90 transition-opacity"
               aria-label={`${t('brand')} - ${t('navigation.home')}`}
             >
-              <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[#38bdf8] shadow-lg shadow-sky-400/30 transition-transform group-hover:scale-105">
+              <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[#FF2800] shadow-lg shadow-red-500/30 transition-transform group-hover:scale-105">
                 <svg
                   className="h-5 w-5 text-white"
                   viewBox="0 0 24 24"
@@ -194,7 +194,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
                 </svg>
               </div>
               <span className="text-xl tracking-tight font-bold" data-testid="brand-name">
-                <span className="text-[#38bdf8]">Yes</span>Convert
+                <span className="text-[#FF2800]">Yes</span>Convert
               </span>
             </Link>
           </div>
