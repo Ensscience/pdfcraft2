@@ -2,10 +2,10 @@
 
 /* PDFCraft Design System - CSS Variables for Theming */
 :root {
-  /* Primary Colors - Deep Blue/Indigo for trust and modern tech feel */
-  --color-primary: 226 71% 55%; /* #3b82f6 - slightly more vibrant */
+  /* Primary Colors - Red for bold and energetic feel */
+  --color-primary: 9 100% 50%; /* #FF2800 */
   --color-primary-foreground: 0 0% 100%;
-  --color-primary-hover: 226 71% 45%;
+  --color-primary-hover: 9 100% 40%;
   
   /* Secondary Colors - Slate for neutral elements */
   --color-secondary: 215 20% 90%;
@@ -31,7 +31,7 @@
   /* Border Colors */
   --color-border: 214 32% 91%;
   --color-input: 214 32% 91%;
-  --color-ring: 226 71% 55%;
+  --color-ring: 9 100% 50%;
   
   /* Destructive Colors */
   --color-destructive: 0 84% 60%;
@@ -80,9 +80,9 @@
 
 /* Dark Mode Theme */
 .dark {
-  --color-primary: 226 71% 60%;
-  --color-primary-foreground: 222 47% 11%;
-  --color-primary-hover: 226 71% 70%;
+  --color-primary: 9 100% 55%;
+  --color-primary-foreground: 0 0% 100%;
+  --color-primary-hover: 9 100% 65%;
   
   --color-secondary: 215 20% 20%;
   --color-secondary-foreground: 210 40% 98%;
@@ -102,7 +102,7 @@
   
   --color-border: 217 33% 15%;
   --color-input: 217 33% 15%;
-  --color-ring: 226 71% 60%;
+  --color-ring: 9 100% 55%;
 }
 
 /* Base Styles */
