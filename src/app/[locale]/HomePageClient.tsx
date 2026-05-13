@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Zap, Wrench, Lock, Sparkles, Edit, FileImage, FolderOpen, Settings, ShieldCheck, Star } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -17,20 +18,238 @@ interface HomePageClientProps {
   localizedToolContent?: Record<string, { title: string; description: string }>;
 }
 
-// ... (previous imports)
+// ─── Redbubble Carousel Banner ───────────────────────────────────────────────
+const REDBUBBLE_URL = 'https://www.redbubble.com/people/Zaydroid/shop?asc=u';
 
-// ... (props interface)
+const slides = [
+  {
+    bg: 'from-[#1a0533] to-[#0f0e17]',
+    blob: 'rgba(180,100,255,0.15)',
+    accent: '#c084fc',
+    btnBg: 'rgba(192,132,252,0.15)',
+    btnBorder: 'rgba(192,132,252,0.35)',
+    tag: 'Unique Designs',
+    headline: ['Wear Art', 'You\'ll Love'],
+    sub: 'Exclusive handcrafted designs on tees, mugs, stickers & more.',
+    cta: 'Shop Now',
+  },
+  {
+    bg: 'from-[#001a33] to-[#0f0e17]',
+    blob: 'rgba(56,189,248,0.15)',
+    accent: '#38bdf8',
+    btnBg: 'rgba(56,189,248,0.15)',
+    btnBorder: 'rgba(56,189,248,0.35)',
+    tag: 'Posters & Prints',
+    headline: ['Art That', 'Transforms Walls'],
+    sub: 'Gallery-worthy prints delivered to your door. Every design one of a kind.',
+    cta: 'Browse Prints',
+  },
+  {
+    bg: 'from-[#1a1a00] to-[#0f0e17]',
+    blob: 'rgba(250,204,21,0.15)',
+    accent: '#fbbf24',
+    btnBg: 'rgba(251,191,36,0.15)',
+    btnBorder: 'rgba(251,191,36,0.35)',
+    tag: 'Apparel & Accessories',
+    headline: ['Style With', 'a Story'],
+    sub: 'Hoodies, tote bags & accessories with designs that spark conversations.',
+    cta: 'See Collection',
+  },
+  {
+    bg: 'from-[#001a1a] to-[#0f0e17]',
+    blob: 'rgba(52,211,153,0.15)',
+    accent: '#34d399',
+    btnBg: 'rgba(52,211,153,0.15)',
+    btnBorder: 'rgba(52,211,153,0.35)',
+    tag: 'Phone Cases & More',
+    headline: ['Protect Your', 'Phone in Style'],
+    sub: 'Custom phone cases with original artwork. Fits most major models.',
+    cta: 'Find Yours',
+  },
+  {
+    bg: 'from-[#1a0000] to-[#0f0e17]',
+    blob: 'rgba(251,113,133,0.15)',
+    accent: '#fb7185',
+    btnBg: 'rgba(251,113,133,0.15)',
+    btnBorder: 'rgba(251,113,133,0.35)',
+    tag: 'Gifts & Stationery',
+    headline: ['Gifts They\'ll', 'Remember Forever'],
+    sub: 'Notebooks, greeting cards & gifts with heart. Perfect for every occasion.',
+    cta: 'Shop Gifts',
+  },
+];
 
-// ... (previous imports)
+function RedbubbleBanner() {
+  const [current, setCurrent] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const total = slides.length;
 
-// ... (props interface)
+  const goTo = (i: number) => setCurrent((i + total) % total);
+
+  const startAuto = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => setCurrent(c => (c + 1) % total), 4000);
+  };
+
+  useEffect(() => {
+    startAuto();
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, []);
+
+  const slide = slides[current];
+
+  return (
+    <section className="py-10" aria-label="Featured Shop">
+      <div className="container mx-auto px-4">
+        {/* Label */}
+        <div className="flex items-center gap-2 mb-4">
+          <span
+            className="inline-block w-2 h-2 rounded-full animate-pulse"
+            style={{ background: '#e63946' }}
+          />
+          <span className="text-xs font-medium uppercase tracking-widest text-slate-400">
+            Featured on Redbubble
+          </span>
+        </div>
+
+        {/* Banner */}
+        <div
+          className="relative rounded-2xl overflow-hidden shadow-2xl"
+          style={{ background: '#0f0e17', aspectRatio: '3/1', minHeight: 140 }}
+          onMouseEnter={() => { if (timerRef.current) clearInterval(timerRef.current); }}
+          onMouseLeave={startAuto}
+        >
+          {/* Blob */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `radial-gradient(circle at 70% 50%, ${slide.blob} 0%, transparent 65%)`,
+              transition: 'background 0.7s ease',
+            }}
+          />
+          {/* Grid texture */}
+          <div
+            className="absolute inset-0 pointer-events-none opacity-30"
+            style={{
+              backgroundImage: 'linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+
+          {/* Content */}
+          <div className="relative z-10 flex items-center h-full px-8 md:px-12 gap-8">
+            {/* Text */}
+            <div className="flex flex-col gap-2 flex-1">
+              <span
+                className="text-xs font-semibold uppercase tracking-widest flex items-center gap-2"
+                style={{ color: slide.accent, transition: 'color 0.5s' }}
+              >
+                <span className="inline-block w-4 h-px" style={{ background: slide.accent }} />
+                {slide.tag}
+              </span>
+
+              <h2
+                className="font-bold leading-tight"
+                style={{
+                  fontFamily: 'Georgia, serif',
+                  fontSize: 'clamp(1rem, 2.5vw, 1.6rem)',
+                  color: '#f8fafc',
+                }}
+              >
+                {slide.headline[0]}<br />
+                <em style={{ fontStyle: 'italic', fontWeight: 400 }}>{slide.headline[1]}</em>
+              </h2>
+
+              <p
+                className="text-slate-400 leading-relaxed"
+                style={{ fontSize: 'clamp(0.65rem, 1.3vw, 0.82rem)', maxWidth: '28ch' }}
+              >
+                {slide.sub}
+              </p>
+
+              <a
+                href={REDBUBBLE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full font-medium transition-all hover:-translate-y-0.5"
+                style={{
+                  marginTop: '0.25rem',
+                  padding: '0.45rem 1.1rem',
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.04em',
+                  background: slide.btnBg,
+                  color: slide.accent,
+                  border: `1px solid ${slide.btnBorder}`,
+                  width: 'fit-content',
+                  textDecoration: 'none',
+                }}
+              >
+                {slide.cta}
+                <ArrowRight size={13} />
+              </a>
+            </div>
+
+            {/* Decorative emoji/icon area */}
+            <div
+              className="hidden md:flex items-center justify-center flex-shrink-0 rounded-xl"
+              style={{
+                width: '22%',
+                height: '75%',
+                background: 'rgba(255,255,255,0.03)',
+                border: `1px solid ${slide.btnBorder}`,
+                fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+              }}
+            >
+              {['🎨', '🖼️', '👕', '📱', '🎁'][current]}
+            </div>
+          </div>
+
+          {/* Prev / Next arrows */}
+          <button
+            onClick={() => { goTo(current - 1); startAuto(); }}
+            className="absolute left-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center rounded-full transition-all hover:bg-white/20"
+            style={{ width: 30, height: 30, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)' }}
+            aria-label="Previous"
+          >
+            <ArrowRight size={13} className="text-white rotate-180" />
+          </button>
+          <button
+            onClick={() => { goTo(current + 1); startAuto(); }}
+            className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center justify-center rounded-full transition-all hover:bg-white/20"
+            style={{ width: 30, height: 30, background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.12)' }}
+            aria-label="Next"
+          >
+            <ArrowRight size={13} className="text-white" />
+          </button>
+
+          {/* Dots */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex gap-1.5">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => { goTo(i); startAuto(); }}
+                aria-label={`Go to slide ${i + 1}`}
+                className="rounded-full transition-all"
+                style={{
+                  width: i === current ? 20 : 6,
+                  height: 6,
+                  background: i === current ? '#fff' : 'rgba(255,255,255,0.25)',
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function HomePageClient({ locale, localizedToolContent }: HomePageClientProps) {
   const t = useTranslations();
   const allTools = getAllTools();
   const popularTools = getPopularTools();
 
-  // Feature highlights (same as before)
   const features = [
     {
       icon: ShieldCheck,
@@ -52,7 +271,6 @@ export default function HomePageClient({ locale, localizedToolContent }: HomePag
     },
   ];
 
-  // Category icons mapping
   const categoryIcons: Record<ToolCategory, typeof Edit> = {
     'edit-annotate': Edit,
     'convert-to-pdf': FileImage,
@@ -71,7 +289,6 @@ export default function HomePageClient({ locale, localizedToolContent }: HomePag
     'secure-pdf': 'securePdf',
   };
 
-  // Category sections to display
   const categoryOrder: ToolCategory[] = [
     'edit-annotate',
     'convert-to-pdf',
@@ -91,7 +308,6 @@ export default function HomePageClient({ locale, localizedToolContent }: HomePag
           className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-28"
           aria-labelledby="hero-title"
         >
-          {/* Animated Background Blobs */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none -z-10">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-[hsl(var(--color-primary)/0.2)] rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
             <div className="absolute top-0 right-1/4 w-96 h-96 bg-[hsl(var(--color-accent)/0.2)] rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" />
@@ -100,7 +316,6 @@ export default function HomePageClient({ locale, localizedToolContent }: HomePag
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              {/* Brand Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-[hsl(var(--color-background)/0.8)] border border-[hsl(var(--color-primary)/0.2)] shadow-sm backdrop-blur-md transition-all hover:bg-[hsl(var(--color-background))]">
                 <Sparkles className="h-4 w-4 text-[hsl(var(--color-primary))]" aria-hidden="true" />
                 <span className="text-sm font-medium text-[hsl(var(--color-primary))]">
@@ -108,18 +323,15 @@ export default function HomePageClient({ locale, localizedToolContent }: HomePag
                 </span>
               </div>
 
-              {/* Hero Title */}
               <h1 id="hero-title" className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
                 <span className="text-[hsl(var(--color-foreground))]">{t('home.hero.title')} </span>
                 <span className="text-gradient block mt-1 pb-2">{t('home.hero.highlight')}</span>
               </h1>
 
-              {/* Hero Subtitle */}
               <p className="text-lg text-[hsl(var(--color-muted-foreground))] mb-8 max-w-2xl mx-auto leading-relaxed">
                 {t('home.hero.subtitle')}
               </p>
 
-              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href={`/${locale}/tools`}>
                   <Button variant="primary" size="lg" className="h-11 px-8 text-base shadow-lg hover:shadow-primary/25 transition-all hover:-translate-y-0.5">
@@ -302,6 +514,10 @@ export default function HomePageClient({ locale, localizedToolContent }: HomePag
             </div>
           </div>
         </section>
+
+        {/* ── Redbubble Banner ── */}
+        <RedbubbleBanner />
+
       </main>
 
       <Footer locale={locale} />
