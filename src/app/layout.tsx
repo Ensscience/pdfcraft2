@@ -40,6 +40,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground antialiased">
         {children}
         <script defer src="/_vercel/insights/script.js"></script>
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="b1314538-7920-4def-a866-40ba6191ce24"></script>
       </body>
     </html>
   );
