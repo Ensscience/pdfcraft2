@@ -10,7 +10,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable static export for deployment flexibility
-  output: 'export',
+   // output: 'export',
   assetPrefix: process.env.TAURI_ENV ? '/' : undefined,
 
   // Webpack configuration for WASM modules
