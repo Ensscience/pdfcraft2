@@ -150,9 +150,9 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
         }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo and Brand Section */}
-          <div className="flex flex-1 flex-col items-start gap-1">
+        <div className="flex h-24 md:h-20 items-center justify-between">
+          {/* Logo and Brand Section - Aligned Center Vertically */}
+          <div className="flex flex-col items-center md:items-start gap-1">
             <Link
               href={`/${locale}`}
               className="group flex items-center gap-2.5 text-xl font-bold text-[hsl(var(--color-foreground))] hover:opacity-90 transition-opacity"
@@ -167,17 +167,17 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
               </span>
             </Link>
 
-            {/* Ko-fi Mobile SVG Icon - UNDER LOGO */}
+            {/* Ko-fi Mobile SVG Icon - PERFECTLY CENTERED UNDER LOGO ICON */}
             <a 
               href="https://ko-fi.com/ensscience" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="md:hidden ml-1 transition-transform active:scale-95"
+              className="md:hidden transition-transform active:scale-95"
               aria-label="Support on Ko-fi"
             >
-              <div className="relative h-10 w-10 rounded-full overflow-hidden border-2 border-[#29abe2] bg-white shadow-sm flex items-center justify-center p-1">
+              <div className="relative h-8 w-8 rounded-full overflow-hidden border-2 border-[#FF2800] bg-white shadow-sm flex items-center justify-center p-1">
                 <svg viewBox="0 0 24 24" className="h-full w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 2.318.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z" fill="#29abe2"/>
+                  <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 2.318.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z" fill="#FF2800"/>
                 </svg>
               </div>
             </a>
@@ -194,7 +194,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
 
           {/* Actions Section */}
           <div className="flex flex-1 items-center justify-end gap-3">
-            <a href="https://ko-fi.com/ensscience" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FF5E5B] hover:bg-[#ff4642] text-white text-xs font-semibold transition-all">
+            <a href="https://ko-fi.com/ensscience" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FF5E5B] hover:bg-[#ff4642] text-white text-xs font-semibold transition-all shadow-sm">
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 2.318.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
               Buy me a coffee
             </a>
@@ -202,23 +202,19 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
             {showSearch && (
               <div className="relative" ref={searchContainerRef}>
                 {isSearchOpen ? (
-                  <div className="fixed md:absolute left-4 right-4 md:left-auto md:right-0 top-[22px] md:top-1/2 md:-translate-y-1/2 z-50 animate-in fade-in slide-in-from-right-4">
+                  <div className="fixed md:absolute left-4 right-4 md:left-auto md:right-0 top-[22px] md:top-1/2 md:-translate-y-1/2 z-50 animate-in fade-in">
                     <div className="relative w-full md:w-96">
                       <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[hsl(var(--color-muted-foreground))]" />
                       <input ref={searchInputRef} type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleKeyDown} placeholder={t('search.placeholder')} className="w-full pl-10 pr-10 py-2.5 text-sm rounded-xl border border-[hsl(var(--color-border))] bg-[hsl(var(--color-background))] shadow-lg focus:outline-none focus:ring-2 focus:ring-[hsl(var(--color-primary))]" />
-                      <Button variant="ghost" size="sm" onClick={handleSearchToggle} className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 p-0 hover:bg-transparent"><X className="h-4 w-4 text-[hsl(var(--color-muted-foreground))]" /></Button>
                     </div>
                   </div>
                 ) : (
-                  <Button variant="ghost" size="sm" onClick={handleSearchToggle} className="relative text-[hsl(var(--color-muted-foreground))]">
+                  <Button variant="ghost" size="sm" onClick={handleSearchToggle} className="text-[hsl(var(--color-muted-foreground))]">
                     <Search className="h-5 w-5" />
-                    <span className="ml-2 hidden lg:inline-block text-xs border border-[hsl(var(--color-border))] rounded px-1.5 py-0.5">⌘K</span>
                   </Button>
                 )}
               </div>
             )}
-            <RecentFilesDropdown locale={locale} translations={{ title: t('recentFiles.title'), empty: t('recentFiles.empty'), clearAll: t('recentFiles.clearAll'), processedWith: t('recentFiles.processedWith') }} />
-            <a href="https://github.com/PDFCraftTool/pdfcraft" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center justify-center h-9 w-9 rounded-lg text-[hsl(var(--color-muted-foreground))] hover:bg-[hsl(var(--color-muted))/0.5]"><Github className="h-5 w-5" /></a>
             <ThemeToggle />
             <Button variant="ghost" size="sm" className="md:hidden" onClick={handleMobileMenuToggle}>{isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</Button>
           </div>
@@ -226,7 +222,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-[hsl(var(--color-border))] bg-[hsl(var(--color-background))] shadow-lg">
+          <nav className="md:hidden py-4 border-t border-[hsl(var(--color-border))] bg-[hsl(var(--color-background))]">
             <ul className="flex flex-col gap-2 p-2">
               {navItems.map((item) => (
                 <li key={item.href}>
