@@ -62,16 +62,11 @@ const nextConfig = {
   },
 
   // Image optimization configuration
-  // Note: unoptimized is required for static export
   images: {
     unoptimized: true,
-    // Define allowed image formats
     formats: ['image/avif', 'image/webp'],
-    // Define device sizes for responsive images
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    // Define image sizes for srcset
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Minimum cache TTL for optimized images (in seconds)
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
   },
 
@@ -81,45 +76,23 @@ const nextConfig = {
     },
   },
 
-  // Trailing slash for static hosting compatibility
   trailingSlash: false,
-
-  // Strict mode for better development experience
   reactStrictMode: true,
 
-  // TypeScript configuration
   typescript: {
-    // Allow production builds even with type errors during development
     ignoreBuildErrors: false,
   },
 
-  // ESLint configuration
   eslint: {
-    // Run ESLint during builds
     ignoreDuringBuilds: false,
   },
 
-  // Compiler options for performance
   compiler: {
-    // Remove console.log in production
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn'],
     } : false,
   },
 
-  // ✅ ADDED: Redirect www → non-www for canonical indexing
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.yesconvert.com' }],
-        destination: 'https://yesconvert.com/:path*',
-        permanent: true,
-      },
-    ];
-  },
-
-  // Headers configuration for caching
   async headers() {
     return [
       {
