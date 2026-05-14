@@ -151,8 +151,8 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
     >
       <div className="container mx-auto px-4">
         <div className="flex h-24 md:h-20 items-center justify-between">
-          {/* Logo and Brand Section - Aligned Center Vertically */}
-          <div className="flex flex-col items-center md:items-start gap-1">
+          {/* Logo and Brand Section */}
+          <div className="flex flex-col items-start gap-1.5">
             <Link
               href={`/${locale}`}
               className="group flex items-center gap-2.5 text-xl font-bold text-[hsl(var(--color-foreground))] hover:opacity-90 transition-opacity"
@@ -167,7 +167,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
               </span>
             </Link>
 
-            {/* Ko-fi Mobile SVG Icon - PERFECTLY CENTERED UNDER LOGO ICON */}
+            {/* Ko-fi Mobile SVG Icon - VERTICALLY UNDER THE LOGO ICON */}
             <a 
               href="https://ko-fi.com/ensscience" 
               target="_blank" 
@@ -175,7 +175,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
               className="md:hidden transition-transform active:scale-95"
               aria-label="Support on Ko-fi"
             >
-              <div className="relative h-8 w-8 rounded-full overflow-hidden border-2 border-[#FF2800] bg-white shadow-sm flex items-center justify-center p-1">
+              <div className="relative h-9 w-9 rounded-full overflow-hidden border-2 border-[#FF2800] bg-white shadow-sm flex items-center justify-center p-1.5">
                 <svg viewBox="0 0 24 24" className="h-full w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 2.318.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z" fill="#FF2800"/>
                 </svg>
@@ -194,7 +194,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
 
           {/* Actions Section */}
           <div className="flex flex-1 items-center justify-end gap-3">
-            <a href="https://ko-fi.com/ensscience" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FF5E5B] hover:bg-[#ff4642] text-white text-xs font-semibold transition-all shadow-sm">
+            <a href="https://ko-fi.com/ensscience" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FF5E5B] hover:bg-[#ff4642] text-white text-xs font-semibold transition-all">
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 2.318.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
               Buy me a coffee
             </a>
