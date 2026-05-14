@@ -107,14 +107,22 @@ const nextConfig = {
     } : false,
   },
 
+  // ✅ ADDED: Redirect www → non-www for canonical indexing
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.yesconvert.com' }],
+        destination: 'https://yesconvert.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
+
   // Headers configuration for caching
-  // Note: These headers are applied when running with `next start`
-  // For static export, configure headers in your hosting platform
   async headers() {
     return [
       {
-        // LibreOffice WASM .wasm.gz — serve as application/wasm with gzip Content-Encoding
-        // Same approach as BentoPDF's nginx config so browser decompresses transparently
         source: '/libreoffice-wasm/soffice.wasm.gz',
         headers: [
           { key: 'Content-Type', value: 'application/wasm' },
@@ -126,7 +134,6 @@ const nextConfig = {
         ],
       },
       {
-        // LibreOffice WASM .data.gz — serve as application/octet-stream with gzip Content-Encoding
         source: '/libreoffice-wasm/soffice.data.gz',
         headers: [
           { key: 'Content-Type', value: 'application/octet-stream' },
@@ -138,7 +145,6 @@ const nextConfig = {
         ],
       },
       {
-        // LibreOffice WASM Worker - needs COEP to spawn workers with SharedArrayBuffer access
         source: '/libreoffice-wasm/browser.worker.global.js',
         headers: [
           { key: 'Content-Type', value: 'application/javascript' },
@@ -149,68 +155,33 @@ const nextConfig = {
         ],
       },
       {
-        // Static assets - long cache
         source: '/:path*.(ico|jpg|jpeg|png|gif|svg|webp|avif|woff|woff2|ttf|eot)',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
       {
-        // JavaScript and CSS - cache with revalidation
         source: '/:path*.(js|css)',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
       {
-        // HTML pages - short cache with revalidation
         source: '/:path*',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=0, must-revalidate',
-          },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
         ],
       },
       {
-        // Security headers for all routes
         source: '/:path*',
         headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          // Required for SharedArrayBuffer (LibreOffice WASM)
-          {
-            key: 'Cross-Origin-Opener-Policy',
-            value: 'same-origin',
-          },
-          {
-            key: 'Cross-Origin-Embedder-Policy',
-            value: 'require-corp',
-          },
-          {
-            key: 'Cross-Origin-Resource-Policy',
-            value: 'cross-origin',
-          },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+          { key: 'Cross-Origin-Embedder-Policy', value: 'require-corp' },
+          { key: 'Cross-Origin-Resource-Policy', value: 'cross-origin' },
         ],
       },
     ];
