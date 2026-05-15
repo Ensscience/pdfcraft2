@@ -402,6 +402,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
           </nav>
         )}
       </div>
+
     </header>
   );
 };
