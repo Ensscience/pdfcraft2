@@ -24,7 +24,7 @@ export default function YesBot() {
         setMessages([
           {
             role: "assistant",
-            content: "Hi! I'm **YesBot** 👋\nI can help you convert files, explain formats, or answer any question about YesConvert.\n\nWhat do you need help with?",
+            content: "Hi! I'm **YesConvert Assistant** 👋\nI can help you convert files, explain formats, or answer any question about YesConvert.\n\nWhat do you need help with?",
           },
         ]);
       }
@@ -74,19 +74,19 @@ export default function YesBot() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
-        .yb-wrap * { box-sizing: border-box; font-family: 'Sora', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        .yb-wrap * { box-sizing: border-box; font-family: 'Inter', sans-serif; }
 
         .yb-btn {
           position: fixed; bottom: 24px; right: 24px; z-index: 9999;
           width: 56px; height: 56px; border-radius: 50%;
-          background: linear-gradient(135deg, #38bdf8, #0284c7);
+          background: linear-gradient(135deg, #F97316, #EF4444);
           border: none; cursor: pointer;
           display: flex; align-items: center; justify-content: center;
-          box-shadow: 0 4px 20px rgba(14,165,233,.4);
+          box-shadow: 0 4px 20px rgba(239,68,68,.4);
           transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s;
         }
-        .yb-btn:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(14,165,233,.5); }
+        .yb-btn:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(239,68,68,.5); }
         .yb-btn:active { transform: scale(.95); }
 
         .yb-dot {
@@ -98,7 +98,7 @@ export default function YesBot() {
         .yb-pulse {
           position: fixed; bottom: 24px; right: 24px; z-index: 9998;
           width: 56px; height: 56px; border-radius: 50%;
-          border: 2.5px solid rgba(56,189,248,.5);
+          border: 2.5px solid rgba(239,68,68,.4);
           animation: yb-ring 2s ease-out infinite;
           pointer-events: none;
         }
@@ -111,8 +111,8 @@ export default function YesBot() {
           position: fixed; bottom: 90px; right: 24px; z-index: 9999;
           width: 360px; max-height: 520px; border-radius: 20px;
           background: #fff;
-          box-shadow: 0 20px 60px rgba(0,0,0,.16), 0 2px 8px rgba(14,165,233,.1);
-          border: 1px solid rgba(14,165,233,.1);
+          box-shadow: 0 20px 60px rgba(0,0,0,.14), 0 2px 8px rgba(239,68,68,.08);
+          border: 1px solid rgba(239,68,68,.1);
           display: flex; flex-direction: column; overflow: hidden;
           animation: yb-up .28s cubic-bezier(.34,1.56,.64,1);
         }
@@ -122,18 +122,18 @@ export default function YesBot() {
         }
 
         .yb-head {
-          background: linear-gradient(135deg, #0ea5e9, #0284c7);
+          background: linear-gradient(135deg, #F97316, #EF4444);
           padding: 14px 16px; display: flex; align-items: center; gap: 10px;
         }
-        .yb-avatar {
+        .yb-logo {
           width: 36px; height: 36px; border-radius: 50%;
           background: rgba(255,255,255,.2);
           display: flex; align-items: center; justify-content: center;
-          font-size: 17px; flex-shrink: 0;
+          font-size: 18px; flex-shrink: 0;
         }
         .yb-head-name { font-weight: 700; font-size: 14.5px; color: #fff; letter-spacing: -.2px; }
         .yb-head-sub {
-          font-size: 11px; color: rgba(255,255,255,.75);
+          font-size: 11px; color: rgba(255,255,255,.8);
           display: flex; align-items: center; gap: 4px; margin-top: 1px;
         }
         .yb-online { width: 6px; height: 6px; background: #86efac; border-radius: 50%; display: inline-block; }
@@ -148,35 +148,36 @@ export default function YesBot() {
         .yb-msgs {
           flex: 1; overflow-y: auto; padding: 14px;
           display: flex; flex-direction: column; gap: 10px;
-          background: #f8fafc;
+          background: #F9FAFB;
         }
         .yb-msgs::-webkit-scrollbar { width: 4px; }
-        .yb-msgs::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .yb-msgs::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 4px; }
 
         .yb-row { display: flex; gap: 7px; align-items: flex-end; }
         .yb-row.u { flex-direction: row-reverse; align-self: flex-end; max-width: 88%; }
         .yb-row.a { align-self: flex-start; max-width: 88%; }
 
         .yb-ic {
-          width: 24px; height: 24px; border-radius: 50%;
-          background: linear-gradient(135deg,#38bdf8,#0284c7);
+          width: 26px; height: 26px; border-radius: 50%;
+          background: linear-gradient(135deg, #F97316, #EF4444);
           display: flex; align-items: center; justify-content: center;
-          font-size: 11px; flex-shrink: 0;
+          font-size: 12px; flex-shrink: 0;
         }
-        .yb-bub { padding: 9px 13px; border-radius: 15px; font-size: 13px; line-height: 1.55; }
+        .yb-bub { padding: 9px 13px; border-radius: 16px; font-size: 13px; line-height: 1.55; }
         .u .yb-bub {
-          background: linear-gradient(135deg,#0ea5e9,#0284c7);
+          background: linear-gradient(135deg, #F97316, #EF4444);
           color: #fff; border-bottom-right-radius: 4px;
         }
         .a .yb-bub {
-          background: #fff; color: #1e293b;
+          background: #fff; color: #1E293B;
           border-bottom-left-radius: 4px;
           box-shadow: 0 1px 4px rgba(0,0,0,.07);
+          border: 1px solid #F3F4F6;
         }
 
         .yb-dots { display:flex; gap:4px; padding: 10px 13px; }
         .yb-dots span {
-          width:7px; height:7px; background:#94a3b8; border-radius:50%;
+          width:7px; height:7px; background:#D1D5DB; border-radius:50%;
           animation: yb-dot 1.2s ease-in-out infinite;
         }
         .yb-dots span:nth-child(2){animation-delay:.2s}
@@ -188,39 +189,43 @@ export default function YesBot() {
 
         .yb-chips {
           display: flex; flex-wrap: wrap; gap: 5px;
-          padding: 8px 14px 4px; background: #f8fafc;
+          padding: 8px 14px 4px; background: #F9FAFB;
         }
         .yb-chip {
-          background: #fff; border: 1px solid #e2e8f0; border-radius: 20px;
-          padding: 4px 11px; font-size: 11.5px; color: #0284c7; cursor: pointer;
-          font-family: 'Sora', sans-serif; font-weight: 500; transition: all .15s;
+          background: #fff; border: 1px solid #FED7AA; border-radius: 20px;
+          padding: 4px 11px; font-size: 11.5px; color: #EA580C; cursor: pointer;
+          font-family: 'Inter', sans-serif; font-weight: 500; transition: all .15s;
         }
-        .yb-chip:hover { background: #e0f2fe; border-color: #7dd3fc; transform: translateY(-1px); }
+        .yb-chip:hover { background: #FFF7ED; border-color: #F97316; transform: translateY(-1px); }
 
         .yb-footer {
           display: flex; align-items: center; gap: 8px;
-          padding: 10px 13px; border-top: 1px solid #f1f5f9; background: #fff;
+          padding: 10px 13px; border-top: 1px solid #F3F4F6; background: #fff;
         }
         .yb-inp {
-          flex: 1; border: 1.5px solid #e2e8f0; border-radius: 11px;
-          padding: 8px 12px; font-size: 13px; font-family: 'Sora', sans-serif;
-          color: #1e293b; background: #f8fafc; outline: none; resize: none;
+          flex: 1; border: 1.5px solid #E5E7EB; border-radius: 11px;
+          padding: 8px 12px; font-size: 13px; font-family: 'Inter', sans-serif;
+          color: #1E293B; background: #F9FAFB; outline: none; resize: none;
           transition: border-color .2s;
         }
-        .yb-inp:focus { border-color: #38bdf8; background: #fff; }
-        .yb-inp::placeholder { color: #94a3b8; }
+        .yb-inp:focus { border-color: #F97316; background: #fff; }
+        .yb-inp::placeholder { color: #9CA3AF; }
         .yb-send {
           width: 36px; height: 36px; border-radius: 9px; flex-shrink: 0;
-          background: linear-gradient(135deg,#38bdf8,#0284c7);
+          background: linear-gradient(135deg, #F97316, #EF4444);
           border: none; cursor: pointer;
           display: flex; align-items: center; justify-content: center;
           transition: all .2s;
         }
-        .yb-send:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(14,165,233,.4); }
+        .yb-send:hover { transform: scale(1.08); box-shadow: 0 4px 12px rgba(239,68,68,.4); }
         .yb-send:active { transform: scale(.94); }
         .yb-send:disabled { opacity: .4; cursor: not-allowed; transform: none; box-shadow: none; }
 
-        .yb-note { text-align: center; font-size: 10px; color: #94a3b8; padding: 0 14px 8px; background: #fff; }
+        .yb-note {
+          text-align: center; font-size: 10px; color: #9CA3AF;
+          padding: 0 14px 8px; background: #fff;
+        }
+        .yb-note span { color: #EF4444; font-weight: 600; }
 
         @media(max-width:400px){
           .yb-panel{ width: calc(100vw - 32px); right: 16px; bottom: 80px; }
@@ -249,10 +254,10 @@ export default function YesBot() {
         {open && (
           <div className="yb-panel">
             <div className="yb-head">
-              <div className="yb-avatar">🤖</div>
+              <div className="yb-logo">✓</div>
               <div>
-                <div className="yb-head-name">YesBot</div>
-                <div className="yb-head-sub"><span className="yb-online" /> Online · YesConvert Assistant</div>
+                <div className="yb-head-name">YesConvert</div>
+                <div className="yb-head-sub"><span className="yb-online" /> Online · Your File Assistant</div>
               </div>
               <button className="yb-x" onClick={() => setOpen(false)}>✕</button>
             </div>
@@ -260,14 +265,14 @@ export default function YesBot() {
             <div className="yb-msgs">
               {messages.map((m, i) => (
                 <div key={i} className={`yb-row ${m.role === "user" ? "u" : "a"}`}>
-                  {m.role === "assistant" && <div className="yb-ic">🤖</div>}
+                  {m.role === "assistant" && <div className="yb-ic">✓</div>}
                   <div className="yb-bub" dangerouslySetInnerHTML={{ __html: renderText(m.content) }} />
                 </div>
               ))}
               {loading && (
                 <div className="yb-row a">
-                  <div className="yb-ic">🤖</div>
-                  <div className="yb-bub" style={{ background: "#fff", boxShadow: "0 1px 4px rgba(0,0,0,.07)" }}>
+                  <div className="yb-ic">✓</div>
+                  <div className="yb-bub" style={{ background: "#fff", border: "1px solid #F3F4F6", boxShadow: "0 1px 4px rgba(0,0,0,.07)" }}>
                     <div className="yb-dots"><span /><span /><span /></div>
                   </div>
                 </div>
@@ -299,7 +304,7 @@ export default function YesBot() {
                 </svg>
               </button>
             </div>
-            <div className="yb-note">Powered by YesConvert ✓ · 100% Private</div>
+            <div className="yb-note">Powered by <span>YesConvert ✓</span> · 100% Private</div>
           </div>
         )}
       </div>
