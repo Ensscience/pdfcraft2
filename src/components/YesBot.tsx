@@ -8,6 +8,7 @@ export default function YesBot() {
   const [loading, setLoading] = useState(false);
   const [initialized, setInitialized] = useState(false);
   const [showPulse, setShowPulse] = useState(true);
+  const [hidden, setHidden] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -227,17 +228,32 @@ export default function YesBot() {
         }
         .yb-note span { color: #EF4444; font-weight: 600; }
 
+        .yb-dismiss {
+          position: fixed; bottom: 54px; right: 18px; z-index: 10000;
+          width: 18px; height: 18px; border-radius: 50%;
+          background: #6B7280; border: 2px solid white;
+          color: white; font-size: 10px;
+          cursor: pointer; display: flex; align-items: center; justify-content: center;
+          box-shadow: 0 1px 4px rgba(0,0,0,.2); transition: background .15s;
+        }
+        .yb-dismiss:hover { background: #EF4444; }
+
         @media(max-width:400px){
           .yb-panel{ width: calc(100vw - 32px); right: 16px; bottom: 80px; }
           .yb-btn { right: 16px; bottom: 16px; }
           .yb-pulse { right: 16px; bottom: 16px; }
+          .yb-dismiss { right: 10px; bottom: 46px; }
         }
       `}</style>
 
       <div className="yb-wrap">
-        {showPulse && !open && <div className="yb-pulse" />}
-
-        <button className="yb-btn" onClick={() => setOpen((v) => !v)} aria-label="Open YesBot">
+        {!hidden && (
+          <>
+            {showPulse && !open && <div className="yb-pulse" />}
+            {!open && (
+              <button className="yb-dismiss" onClick={() => setHidden(true)} aria-label="Dismiss">✕</button>
+            )}
+            <button className="yb-btn" onClick={() => setOpen((v) => !v)} aria-label="Open YesBot">
           <div className="yb-dot" />
           {open ? (
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
@@ -251,7 +267,7 @@ export default function YesBot() {
           )}
         </button>
 
-        {open && (
+            {open && (
           <div className="yb-panel">
             <div className="yb-head">
               <div className="yb-logo">✓</div>
@@ -307,7 +323,10 @@ export default function YesBot() {
             <div className="yb-note">Powered by <span>YesConvert ✓</span> · 100% Private</div>
           </div>
         )}
+          </>
+        )}
       </div>
     </>
   );
 }
+
