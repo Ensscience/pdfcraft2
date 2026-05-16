@@ -6,6 +6,7 @@ import { localeConfig, type Locale, locales } from '@/lib/i18n/config';
 import { generateHomeMetadata } from '@/lib/seo';
 import { fontVariables } from '@/lib/fonts';
 import { SkipLink } from '@/components/common/SkipLink';
+import YesBot from '@/components/YesBot';
 import '@/app/globals.css';
 
 export function generateStaticParams() {
@@ -32,13 +33,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  // Validate locale
   const validLocale = locales.includes(locale as Locale) ? (locale as Locale) : 'en';
-
-  // Get localized SEO translations
   const t = await getTranslations({ locale: validLocale, namespace: 'metadata' });
-
-  // Generate metadata using the SEO module with translations
   return generateHomeMetadata(validLocale, {
     title: t('home.title'),
     description: t('home.description'),
@@ -54,18 +50,12 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  // Validate locale
   if (!locales.includes(locale as Locale)) {
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
-
-  // Get messages for the locale
   const messages = await getMessages();
-
-  // Get direction for the locale
   const direction = localeConfig[locale as Locale]?.direction || 'ltr';
 
   return (
@@ -73,6 +63,7 @@ export default async function LocaleLayout({
       <div lang={locale} dir={direction} className={`${fontVariables} min-h-screen bg-background text-foreground antialiased font-sans`}>
         <SkipLink targetId="main-content">Skip to main content</SkipLink>
         {children}
+        <YesBot />
       </div>
     </NextIntlClientProvider>
   );
