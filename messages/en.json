@@ -171,7 +171,7 @@
   },
   "toolsPage": {
     "title": "Professional PDF Tools",
-    "subtitle": "{count}+ free, secure, and easy-to-use tools for all your PDF needs.",
+    "subtitle": "{count} free, secure, and easy-to-use tools for all your PDF needs.",
     "filters": "Filters",
     "allTools": "All Tools",
     "clearAll": "Clear all",
@@ -281,7 +281,7 @@
   },
   "aboutPage": {
     "title": "About {brand}",
-    "description": "{brand} is a free, privacy-focused PDF toolkit that runs entirely in your browser. With {count}+ professional tools, you can edit, convert, merge, split, and secure your PDF files without ever uploading them to a server.",
+    "description": "{brand} is a free, privacy-focused PDF toolkit that runs entirely in your browser. With {count} professional tools, you can edit, convert, merge, split, and secure your PDF files without ever uploading them to a server.",
     "mission": {
       "title": "Our Mission",
       "p1": "We believe that everyone should have access to powerful PDF tools without compromising their privacy or paying expensive subscription fees. That's why we created {brand} – a comprehensive PDF toolkit that puts your privacy first.",
@@ -329,7 +329,7 @@
     },
     "cta": {
       "title": "Ready to Get Started?",
-      "description": "Explore our {count}+ PDF tools and see what {brand} can do for you.",
+      "description": "Explore our {count} PDF tools and see what {brand} can do for you.",
       "button": "Browse All Tools"
     }
   },
@@ -452,7 +452,7 @@
     },
     "categoriesSection": {
       "title": "Explore All Tool Categories",
-      "description": "{count}+ professional PDF tools organized by category",
+      "description": "{count} professional PDF tools organized by category",
       "toolsCount": "{count} tools"
     },
     "categoriesDescription": {

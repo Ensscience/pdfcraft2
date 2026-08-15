@@ -429,7 +429,7 @@
     },
     "categoriesSection": {
       "title": "Explorar todas as categorias",
-      "description": "{count}+ ferramentas PDF profissionais organizadas por categoria",
+      "description": "{count} ferramentas PDF profissionais organizadas por categoria",
       "toolsCount": "{count} ferramentas"
     },
     "categoriesDescription": {

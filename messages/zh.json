@@ -165,7 +165,7 @@
   },
   "toolsPage": {
     "title": "专业 PDF 工具",
-    "subtitle": "{count}+ 款免费、安全且易于使用的工具，满足您所有的 PDF 需求。",
+    "subtitle": "{count} 款免费、安全且易于使用的工具，满足您所有的 PDF 需求。",
     "filters": "筛选",
     "allTools": "所有工具",
     "clearAll": "清除全部",
@@ -275,7 +275,7 @@
   },
   "aboutPage": {
     "title": "关于 {brand}",
-    "description": "{brand} 是一个免费、注重隐私的 PDF 工具包，完全在您的浏览器中运行。拥有 {count}+ 个专业工具，您可以编辑、转换、合并、分割和保护您的 PDF 文件，而无需将其上传到任何服务器。",
+    "description": "{brand} 是一个免费、注重隐私的 PDF 工具包，完全在您的浏览器中运行。拥有 {count} 个专业工具，您可以编辑、转换、合并、分割和保护您的 PDF 文件，而无需将其上传到任何服务器。",
     "mission": {
       "title": "我们的使命",
       "p1": "我们相信，每个人都应该能够使用强大的 PDF 工具，而无需牺牲隐私或支付昂贵的订阅费用。这就是为什么我们创建了 {brand} —— 一个将您的隐私放在首位的综合 PDF 工具包。",
@@ -323,7 +323,7 @@
     },
     "cta": {
       "title": "准备好开始了吗？",
-      "description": "探索我们的 {count}+ 个 PDF 工具，看看 {brand} 能为您做什么。",
+      "description": "探索我们的 {count} 个 PDF 工具，看看 {brand} 能为您做什么。",
       "button": "浏览所有工具"
     }
   },
@@ -442,7 +442,7 @@
     },
     "categoriesSection": {
       "title": "浏览所有工具分类",
-      "description": "{count}+ 个按类别组织的专业 PDF 工具",
+      "description": "{count} 个按类别组织的专业 PDF 工具",
       "toolsCount": "{count} 个工具"
     },
     "categoriesDescription": {

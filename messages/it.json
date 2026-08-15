@@ -165,7 +165,7 @@
   },
   "toolsPage": {
     "title": "Strumenti PDF Professionali",
-    "subtitle": "{count}+ strumenti gratuiti, sicuri e facili da usare per tutte le tue esigenze PDF.",
+    "subtitle": "{count} strumenti gratuiti, sicuri e facili da usare per tutte le tue esigenze PDF.",
     "filters": "Filtri",
     "allTools": "Tutti gli strumenti",
     "clearAll": "Pulisci tutto",
@@ -323,7 +323,7 @@
     },
     "cta": {
       "title": "Pronto per iniziare?",
-      "description": "Esplora i nostri {count}+ strumenti PDF e scopri cosa può fare {brand} per te.",
+      "description": "Esplora i nostri {count} strumenti PDF e scopri cosa può fare {brand} per te.",
       "button": "Sfoglia tutti gli strumenti"
     }
   },
@@ -442,7 +442,7 @@
     },
     "categoriesSection": {
       "title": "Esplora tutte le categorie",
-      "description": "{count}+ strumenti PDF professionali organizzati per categoria",
+      "description": "{count} strumenti PDF professionali organizzati per categoria",
       "toolsCount": "{count} strumenti"
     },
     "categoriesDescription": {
