@@ -6,7 +6,7 @@
     },
     "tools": {
       "title": "Semua Alat PDF",
-      "description": "Jelajahi lebih dari 67 alat PDF profesional. Gabungkan, pisahkan, kompres, konversi, edit, dan amankan file PDF Anda secara gratis."
+      "description": "Jelajahi lebih dari 99 alat PDF profesional. Gabungkan, pisahkan, kompres, konversi, edit, dan amankan file PDF Anda secara gratis."
     },
     "about": {
       "title": "Tentang",
@@ -201,7 +201,7 @@
       "general": {
         "whatIs": {
           "question": "Apa itu YesConvert?",
-          "answer": "YesConvert adalah toolkit PDF gratis yang berfokus pada privasi yang berjalan sepenuhnya di browser Anda. Kami menawarkan 80+ alat profesional untuk mengedit, mengonversi, menggabung, memisah, dan mengamankan file PDF tanpa mengunggahnya ke server mana pun."
+          "answer": "YesConvert adalah toolkit PDF gratis yang berfokus pada privasi yang berjalan sepenuhnya di browser Anda. Kami menawarkan 99 alat profesional untuk mengedit, mengonversi, menggabung, memisah, dan mengamankan file PDF tanpa mengunggahnya ke server mana pun."
         },
         "isFree": {
           "question": "Apakah YesConvert benar-benar gratis?",
@@ -229,7 +229,7 @@
       "features": {
         "operations": {
           "question": "Operasi PDF apa saja yang bisa saya lakukan?",
-          "answer": "YesConvert menawarkan 67+ alat termasuk: gabung, pisah, kompres, konversi (ke/dari gambar, teks, JSON), edit, anotasi, tanda tangan, tambah watermark, enkripsi/dekripsi, OCR, dan banyak lagi."
+          "answer": "YesConvert menawarkan 99 alat termasuk: gabung, pisah, kompres, konversi (ke/dari gambar, teks, JSON), edit, anotasi, tanda tangan, tambah watermark, enkripsi/dekripsi, OCR, dan banyak lagi."
         },
         "merge": {
           "question": "Bisakah saya menggabungkan beberapa file PDF?",
@@ -442,7 +442,7 @@
       },
       "powerful": {
         "title": "Alat yang Kuat",
-        "description": "67+ alat PDF profesional untuk semua kebutuhan Anda."
+        "description": "99 alat PDF profesional untuk semua kebutuhan Anda."
       }
     },
     "popularTools": {

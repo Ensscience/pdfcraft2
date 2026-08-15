@@ -6,7 +6,7 @@
     },
     "tools": {
       "title": "Tous les Outils PDF",
-      "description": "Parcourez plus de 67 outils PDF professionnels. Fusionnez, divisez, compressez, convertissez, modifiez et sécurisez vos fichiers PDF gratuitement."
+      "description": "Parcourez les 99 outils PDF professionnels. Fusionnez, divisez, compressez, convertissez, modifiez et sécurisez vos fichiers PDF gratuitement."
     },
     "about": {
       "title": "À Propos",
@@ -157,7 +157,7 @@
         "general": {
           "whatIs": {
             "question": "What is YesConvert?",
-            "answer": "YesConvert is a free, privacy-focused PDF toolkit that runs entirely in your browser. It offers 67+ professional tools for editing, converting, merging, splitting, and securing PDF files without uploading them to any server."
+            "answer": "YesConvert is a free, privacy-focused PDF toolkit that runs entirely in your browser. It offers 99 professional tools for editing, converting, merging, splitting, and securing PDF files without uploading them to any server."
           },
           "isFree": {
             "question": "Is YesConvert really free?",
@@ -185,7 +185,7 @@
         "features": {
           "operations": {
             "question": "What PDF operations can I perform?",
-            "answer": "YesConvert offers 67+ tools including: merge, split, compress, convert (to/from images, text, JSON), edit, annotate, sign, add watermarks, encrypt/decrypt, OCR, and many more."
+            "answer": "YesConvert offers 99 tools including: merge, split, compress, convert (to/from images, text, JSON), edit, annotate, sign, add watermarks, encrypt/decrypt, OCR, and many more."
           },
           "merge": {
             "question": "Can I merge multiple PDF files?",
@@ -221,7 +221,7 @@
         "languages": {
           "supported": {
             "question": "What languages are supported?",
-            "answer": "YesConvert is available in 9 languages: English, Japanese, Korean, Spanish, French, German, Chinese, Portuguese, and Arabic (with RTL support)."
+            "answer": "YesConvert is available in 13 languages: English, Japanese, Korean, Spanish, French, German, Simplified Chinese, Traditional Chinese, Portuguese, Arabic, Italian, Indonesian, and Vietnamese (with RTL support for Arabic)."
           },
           "change": {
             "question": "How do I change the language?",
@@ -256,7 +256,7 @@
         },
         "accessible": {
           "title": "Accessible Everywhere",
-          "description": "Available in 9 languages and works on any device with a modern browser. No installation required."
+          "description": "Available in 13 languages and works on any device with a modern browser. No installation required."
         },
         "free": {
           "title": "Free Forever",
@@ -419,7 +419,7 @@
       },
       "powerful": {
         "title": "Outils Puissants",
-        "description": "Plus de 67 outils PDF professionnels pour tous vos besoins."
+        "description": "Plus de 99 outils PDF professionnels pour tous vos besoins."
       }
     },
     "popularTools": {

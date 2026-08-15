@@ -6,7 +6,7 @@
     },
     "tools": {
       "title": "所有 PDF 工具",
-      "description": "浏览 67+ 款专业 PDF 工具。免费合并、拆分、压缩、转换、编辑和保护您的 PDF 文件。"
+      "description": "浏览 99 款专业 PDF 工具。免费合并、拆分、压缩、转换、编辑和保护您的 PDF 文件。"
     },
     "about": {
       "title": "关于我们",
@@ -195,7 +195,7 @@
       "general": {
         "whatIs": {
           "question": "YesConvert 是什么？",
-          "answer": "YesConvert 是一个免费、注重隐私的 PDF 工具包，完全在您的浏览器中运行。它提供 67+ 个专业工具，用于编辑、转换、合并、分割和加密 PDF 文件，而无需将其上传到任何服务器。"
+          "answer": "YesConvert 是一个免费、注重隐私的 PDF 工具包，完全在您的浏览器中运行。它提供 99 个专业工具，用于编辑、转换、合并、分割和加密 PDF 文件，而无需将其上传到任何服务器。"
         },
         "isFree": {
           "question": "YesConvert 真的免费吗？",
@@ -223,7 +223,7 @@
       "features": {
         "operations": {
           "question": "我可以执行哪些 PDF 操作？",
-          "answer": "YesConvert 提供 67+ 个工具，包括：合并、分割、压缩、转换（转为/来自图像、文本、JSON）、编辑、注释、签名、添加水印、加密/解密、OCR 等等。"
+          "answer": "YesConvert 提供 99 个工具，包括：合并、分割、压缩、转换（转为/来自图像、文本、JSON）、编辑、注释、签名、添加水印、加密/解密、OCR 等等。"
         },
         "merge": {
           "question": "我可以合并多个 PDF 文件吗？",
@@ -432,7 +432,7 @@
       },
       "powerful": {
         "title": "强大工具",
-        "description": "67+专业PDF工具满足您的所有需求。"
+        "description": "99专业PDF工具满足您的所有需求。"
       }
     },
     "popularTools": {

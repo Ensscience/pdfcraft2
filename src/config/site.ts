@@ -7,8 +7,8 @@ export const siteConfig = {
   url: 'https://yesconvert.com',
   ogImage: '/images/og-image.png',
   links: {
-    github: 'https://github.com/PDFCraftTool/pdfcraft',
-    twitter: 'https://twitter.com/pdfcraft',
+    github: 'https://github.com/Ensscience/pdfcraft2',
+    twitter: '',
   },
   creator: 'Ahmed Chouib',
   keywords: [
@@ -27,7 +27,7 @@ export const siteConfig = {
   seo: {
     titleTemplate: '%s | YesConvert',
     defaultTitle: 'YesConvert - Free Online PDF & File Converter',
-    twitterHandle: '@pdfcraft',
+    twitterHandle: '',
     locale: 'en_US',
   },
 };

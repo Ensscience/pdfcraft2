@@ -6,7 +6,7 @@
     },
     "tools": {
       "title": "Todas as Ferramentas PDF",
-      "description": "Navegue por mais de 67 ferramentas PDF profissionais. Mescle, divida, comprima, converta, edite e proteja seus arquivos PDF gratuitamente."
+      "description": "Navegue pelas 99 ferramentas PDF profissionais. Mescle, divida, comprima, converta, edite e proteja seus arquivos PDF gratuitamente."
     },
     "about": {
       "title": "Sobre Nós",
@@ -157,7 +157,7 @@
         "general": {
           "whatIs": {
             "question": "O que é o YesConvert?",
-            "answer": "O YesConvert é um conjunto de ferramentas PDF gratuito e focado na privacidade que funciona inteiramente no seu navegador. Ele oferece mais de 67 ferramentas profissionais para editar, converter, mesclar, dividir e proteger arquivos PDF sem enviá-los para nenhum servidor."
+            "answer": "O YesConvert é um conjunto de ferramentas PDF gratuito e focado na privacidade que funciona inteiramente no seu navegador. Ele oferece mais de 99 ferramentas profissionais para editar, converter, mesclar, dividir e proteger arquivos PDF sem enviá-los para nenhum servidor."
           },
           "isFree": {
             "question": "O YesConvert é realmente gratuito?",
@@ -185,7 +185,7 @@
         "features": {
           "operations": {
             "question": "Quais operações de PDF posso realizar?",
-            "answer": "O YesConvert oferece mais de 67 ferramentas, incluindo: mesclar, dividir, comprimir, converter (de/para imagens, texto, JSON), editar, anotar, assinar, adicionar marcas d'água, criptografar/descriptografar, OCR e muito mais."
+            "answer": "O YesConvert oferece mais de 99 ferramentas, incluindo: mesclar, dividir, comprimir, converter (de/para imagens, texto, JSON), editar, anotar, assinar, adicionar marcas d'água, criptografar/descriptografar, OCR e muito mais."
           },
           "merge": {
             "question": "Posso mesclar vários arquivos PDF?",
@@ -221,7 +221,7 @@
         "languages": {
           "supported": {
             "question": "Quais idiomas são suportados?",
-            "answer": "O YesConvert está disponível em 9 idiomas: Inglês, Japonês, Coreano, Espanhol, Francês, Alemão, Chinês, Português e Árabe (com suporte RTL)."
+            "answer": "O YesConvert está disponível em 13 idiomas: Inglês, Japonês, Coreano, Espanhol, Francês, Alemão, Chinês Simplificado, Chinês Tradicional, Português, Árabe, Italiano, Indonésio e Vietnamita (com suporte RTL para o árabe)."
           },
           "change": {
             "question": "Como altero o idioma?",
@@ -256,7 +256,7 @@
         },
         "accessible": {
           "title": "Acessível em Qualquer Lugar",
-          "description": "Disponível em 9 idiomas e compatível com qualquer dispositivo com navegador moderno. Nenhuma instalação necessária."
+          "description": "Disponível em 13 idiomas e compatível com qualquer dispositivo com navegador moderno. Nenhuma instalação necessária."
         },
         "free": {
           "title": "Gratuito para Sempre",
@@ -419,7 +419,7 @@
       },
       "powerful": {
         "title": "Ferramentas Poderosas",
-        "description": "Mais de 67 ferramentas PDF profissionais para todas as suas necessidades."
+        "description": "Mais de 99 ferramentas PDF profissionais para todas as suas necessidades."
       }
     },
     "popularTools": {
@@ -2288,7 +2288,7 @@
       },
       "accessible": {
         "title": "Acessível em Qualquer Lugar",
-        "description": "Disponível em 9 idiomas e funciona em qualquer dispositivo com um navegador moderno. Nenhuma instalação necessária."
+        "description": "Disponível em 13 idiomas e funciona em qualquer dispositivo com um navegador moderno. Nenhuma instalação necessária."
       },
       "free": {
         "title": "Gratuito para Sempre",

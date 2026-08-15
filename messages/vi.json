@@ -6,7 +6,7 @@
     },
     "tools": {
       "title": "Tất cả Công cụ PDF",
-      "description": "Khám phá hơn 67+ công cụ PDF chuyên nghiệp. Hợp nhất, tách, nén, chuyển đổi, chỉnh sửa và bảo mật tệp PDF miễn phí."
+      "description": "Khám phá hơn 99 công cụ PDF chuyên nghiệp. Hợp nhất, tách, nén, chuyển đổi, chỉnh sửa và bảo mật tệp PDF miễn phí."
     },
     "about": {
       "title": "Giới thiệu",
@@ -195,7 +195,7 @@
       "general": {
         "whatIs": {
           "question": "YesConvert là gì?",
-          "answer": "YesConvert là bộ công cụ PDF miễn phí, tập trung vào quyền riêng tư, chạy hoàn toàn trong trình duyệt của bạn. Nó cung cấp hơn 80 công cụ chuyên nghiệp để chỉnh sửa, chuyển đổi, hợp nhất, tách và bảo mật tệp PDF mà không cần tải lên bất kỳ máy chủ nào."
+          "answer": "YesConvert là bộ công cụ PDF miễn phí, tập trung vào quyền riêng tư, chạy hoàn toàn trong trình duyệt của bạn. Nó cung cấp hơn 99 công cụ chuyên nghiệp để chỉnh sửa, chuyển đổi, hợp nhất, tách và bảo mật tệp PDF mà không cần tải lên bất kỳ máy chủ nào."
         },
         "isFree": {
           "question": "YesConvert có thực sự miễn phí không?",
@@ -223,7 +223,7 @@
       "features": {
         "operations": {
           "question": "Tôi có thể thực hiện những thao tác PDF nào?",
-          "answer": "YesConvert cung cấp hơn 67 công cụ bao gồm: hợp nhất, tách, nén, chuyển đổi (sang/từ hình ảnh, văn bản, JSON), chỉnh sửa, chú thích, ký, thêm dấu mờ, mã hóa/giải mã, OCR và nhiều hơn nữa."
+          "answer": "YesConvert cung cấp hơn 99 công cụ bao gồm: hợp nhất, tách, nén, chuyển đổi (sang/từ hình ảnh, văn bản, JSON), chỉnh sửa, chú thích, ký, thêm dấu mờ, mã hóa/giải mã, OCR và nhiều hơn nữa."
         },
         "merge": {
           "question": "Tôi có thể hợp nhất nhiều tệp PDF không?",
@@ -432,7 +432,7 @@
       },
       "powerful": {
         "title": "Công cụ Mạnh mẽ",
-        "description": "Hơn 67 công cụ PDF chuyên nghiệp cho mọi nhu cầu."
+        "description": "Hơn 99 công cụ PDF chuyên nghiệp cho mọi nhu cầu."
       }
     },
     "popularTools": {
