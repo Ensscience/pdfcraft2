@@ -1,105 +1,85 @@
 /**
  * Sitemap Generation
- * Generates sitemap.xml for all pages across all locales
- * 
+ * Generates sitemap.xml for all deliberate indexable pages across all locales.
+ *
  * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
  */
 
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/config/site';
 import { locales, type Locale } from '@/lib/i18n/config';
 import { getAllTools } from '@/config/tools';
+import { TOOL_CATEGORIES } from '@/types/tool';
 
-// Required for static export
 export const dynamic = 'force-static';
 
-/**
- * Priority values for different page types
- */
+type ChangeFrequency = 'daily' | 'weekly' | 'monthly';
+
 const PRIORITY = {
   home: 1.0,
   tools: 0.9,
-  toolPage: 0.8,
-  static: 0.6,
+  category: 0.8,
+  toolPage: 0.7,
+  static: 0.5,
 } as const;
 
-/**
- * Change frequency for different page types
- */
-const CHANGE_FREQUENCY = {
+const CHANGE_FREQUENCY: Record<keyof typeof PRIORITY, ChangeFrequency> = {
   home: 'daily',
   tools: 'weekly',
+  category: 'weekly',
   toolPage: 'weekly',
   static: 'monthly',
-} as const;
+};
 
-/**
- * Static pages that exist for all locales
- */
 const STATIC_PAGES = [
   { path: '', priority: PRIORITY.home, changeFrequency: CHANGE_FREQUENCY.home },
   { path: '/tools', priority: PRIORITY.tools, changeFrequency: CHANGE_FREQUENCY.tools },
+  { path: '/workflow', priority: PRIORITY.static, changeFrequency: CHANGE_FREQUENCY.static },
   { path: '/about', priority: PRIORITY.static, changeFrequency: CHANGE_FREQUENCY.static },
   { path: '/faq', priority: PRIORITY.static, changeFrequency: CHANGE_FREQUENCY.static },
   { path: '/privacy', priority: PRIORITY.static, changeFrequency: CHANGE_FREQUENCY.static },
   { path: '/contact', priority: PRIORITY.static, changeFrequency: CHANGE_FREQUENCY.static },
-];
+] as const;
 
-/**
- * Generate sitemap entries for a specific locale
- */
-function generateLocaleEntries(locale: Locale, lastModified: Date): MetadataRoute.Sitemap {
+const CATEGORY_PAGES = TOOL_CATEGORIES.map((category) => ({
+  path: `/tools/category/${category}`,
+  priority: PRIORITY.category,
+  changeFrequency: CHANGE_FREQUENCY.category,
+}));
+
+function createEntry(
+  url: string,
+  priority: number,
+  changeFrequency: ChangeFrequency
+): MetadataRoute.Sitemap[number] {
+  // Deliberately omit lastModified because the repository does not track
+  // reliable per-page content modification dates.
+  return { url, priority, changeFrequency };
+}
+
+function generateLocaleEntries(locale: Locale): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
-  
-  // Add static pages
+
   for (const page of STATIC_PAGES) {
-    entries.push({
-      url: `${siteConfig.url}/${locale}${page.path}`,
-      lastModified,
-      changeFrequency: page.changeFrequency as 'daily' | 'weekly' | 'monthly',
-      priority: page.priority,
-    });
+    entries.push(createEntry(`${siteConfig.url}/${locale}${page.path}`, page.priority, page.changeFrequency));
   }
-  
-  // Add tool pages
-  const tools = getAllTools();
-  for (const tool of tools) {
-    entries.push({
-      url: `${siteConfig.url}/${locale}/tools/${tool.slug}`,
-      lastModified,
-      changeFrequency: CHANGE_FREQUENCY.toolPage,
-      priority: PRIORITY.toolPage,
-    });
+
+  for (const page of CATEGORY_PAGES) {
+    entries.push(createEntry(`${siteConfig.url}/${locale}${page.path}`, page.priority, page.changeFrequency));
   }
-  
+
+  for (const tool of getAllTools()) {
+    entries.push(createEntry(`${siteConfig.url}/${locale}/tools/${tool.slug}`, PRIORITY.toolPage, CHANGE_FREQUENCY.toolPage));
+  }
+
   return entries;
 }
 
-/**
- * Generate the complete sitemap
- */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-  const allEntries: MetadataRoute.Sitemap = [];
-  
-  // Generate entries for each locale
-  for (const locale of locales) {
-    const localeEntries = generateLocaleEntries(locale, lastModified);
-    allEntries.push(...localeEntries);
-  }
-  
-  return allEntries;
+  const rootEntry = createEntry(siteConfig.url, PRIORITY.home, CHANGE_FREQUENCY.home);
+  return [rootEntry, ...locales.flatMap((locale) => generateLocaleEntries(locale))];
 }
 
-/**
- * Get total number of URLs in sitemap
- * Useful for testing and validation
- */
 export function getSitemapUrlCount(): number {
-  const tools = getAllTools();
-  const staticPagesCount = STATIC_PAGES.length;
-  const toolPagesCount = tools.length;
-  const localesCount = locales.length;
-  
-  return (staticPagesCount + toolPagesCount) * localesCount;
+  return 1 + (STATIC_PAGES.length + CATEGORY_PAGES.length + getAllTools().length) * locales.length;
 }

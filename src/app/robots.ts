@@ -17,11 +17,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/api/',
-          '/_next/',
-          '/static/',
-        ],
+        // Public JavaScript and CSS are required to render the client-enhanced
+        // portions of the otherwise server-rendered pages.
+        disallow: ['/api/'],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,

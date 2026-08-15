@@ -6,7 +6,7 @@
     },
     "tools": {
       "title": "Tutti gli Strumenti PDF",
-      "description": "Esplora oltre 67 strumenti PDF professionali. Unisci, dividi, comprimi, converti, modifica e proteggi i tuoi PDF gratuitamente."
+      "description": "Esplora oltre 99 strumenti PDF professionali. Unisci, dividi, comprimi, converti, modifica e proteggi i tuoi PDF gratuitamente."
     },
     "about": {
       "title": "Informazioni",
@@ -165,7 +165,7 @@
   },
   "toolsPage": {
     "title": "Strumenti PDF Professionali",
-    "subtitle": "{count}+ strumenti gratuiti, sicuri e facili da usare per tutte le tue esigenze PDF.",
+    "subtitle": "{count} strumenti gratuiti, sicuri e facili da usare per tutte le tue esigenze PDF.",
     "filters": "Filtri",
     "allTools": "Tutti gli strumenti",
     "clearAll": "Pulisci tutto",
@@ -195,7 +195,7 @@
       "general": {
         "whatIs": {
           "question": "Che cos'è YesConvert?",
-          "answer": "YesConvert è un kit di strumenti PDF gratuito e attento alla privacy che funziona interamente nel tuo browser. Offre oltre 80 strumenti professionali per modificare, convertire, unire, dividere e proteggere i PDF senza caricare nulla su server."
+          "answer": "YesConvert è un kit di strumenti PDF gratuito e attento alla privacy che funziona interamente nel tuo browser. Offre oltre 99 strumenti professionali per modificare, convertire, unire, dividere e proteggere i PDF senza caricare nulla su server."
         },
         "isFree": {
           "question": "YesConvert è davvero gratuito?",
@@ -223,7 +223,7 @@
       "features": {
         "operations": {
           "question": "Quali operazioni PDF posso eseguire?",
-          "answer": "YesConvert offre oltre 67 strumenti, tra cui: unione, divisione, compressione, conversione (verso/da immagini, testo, JSON), modifica, annotazione, firma, aggiunta di filigrane, crittografia/decrittografia, OCR e molto altro."
+          "answer": "YesConvert offre oltre 99 strumenti, tra cui: unione, divisione, compressione, conversione (verso/da immagini, testo, JSON), modifica, annotazione, firma, aggiunta di filigrane, crittografia/decrittografia, OCR e molto altro."
         },
         "merge": {
           "question": "Posso unire più file PDF?",
@@ -323,7 +323,7 @@
     },
     "cta": {
       "title": "Pronto per iniziare?",
-      "description": "Esplora i nostri {count}+ strumenti PDF e scopri cosa può fare {brand} per te.",
+      "description": "Esplora i nostri {count} strumenti PDF e scopri cosa può fare {brand} per te.",
       "button": "Sfoglia tutti gli strumenti"
     }
   },
@@ -432,7 +432,7 @@
       },
       "powerful": {
         "title": "Strumenti potenti",
-        "description": "Oltre 67 strumenti professionali per tutte le tue esigenze."
+        "description": "Oltre 99 strumenti professionali per tutte le tue esigenze."
       }
     },
     "popularTools": {
@@ -442,7 +442,7 @@
     },
     "categoriesSection": {
       "title": "Esplora tutte le categorie",
-      "description": "{count}+ strumenti PDF professionali organizzati per categoria",
+      "description": "{count} strumenti PDF professionali organizzati per categoria",
       "toolsCount": "{count} strumenti"
     },
     "categoriesDescription": {

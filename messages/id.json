@@ -6,7 +6,7 @@
     },
     "tools": {
       "title": "Semua Alat PDF",
-      "description": "Jelajahi lebih dari 67 alat PDF profesional. Gabungkan, pisahkan, kompres, konversi, edit, dan amankan file PDF Anda secara gratis."
+      "description": "Jelajahi lebih dari 99 alat PDF profesional. Gabungkan, pisahkan, kompres, konversi, edit, dan amankan file PDF Anda secara gratis."
     },
     "about": {
       "title": "Tentang",
@@ -171,7 +171,7 @@
   },
   "toolsPage": {
     "title": "Alat PDF Profesional",
-    "subtitle": "{count}+ alat gratis, aman, dan mudah digunakan untuk semua kebutuhan PDF Anda.",
+    "subtitle": "{count} alat gratis, aman, dan mudah digunakan untuk semua kebutuhan PDF Anda.",
     "filters": "Filter",
     "allTools": "Semua Alat",
     "clearAll": "Bersihkan semua",
@@ -201,7 +201,7 @@
       "general": {
         "whatIs": {
           "question": "Apa itu YesConvert?",
-          "answer": "YesConvert adalah toolkit PDF gratis yang berfokus pada privasi yang berjalan sepenuhnya di browser Anda. Kami menawarkan 80+ alat profesional untuk mengedit, mengonversi, menggabung, memisah, dan mengamankan file PDF tanpa mengunggahnya ke server mana pun."
+          "answer": "YesConvert adalah toolkit PDF gratis yang berfokus pada privasi yang berjalan sepenuhnya di browser Anda. Kami menawarkan 99 alat profesional untuk mengedit, mengonversi, menggabung, memisah, dan mengamankan file PDF tanpa mengunggahnya ke server mana pun."
         },
         "isFree": {
           "question": "Apakah YesConvert benar-benar gratis?",
@@ -229,7 +229,7 @@
       "features": {
         "operations": {
           "question": "Operasi PDF apa saja yang bisa saya lakukan?",
-          "answer": "YesConvert menawarkan 67+ alat termasuk: gabung, pisah, kompres, konversi (ke/dari gambar, teks, JSON), edit, anotasi, tanda tangan, tambah watermark, enkripsi/dekripsi, OCR, dan banyak lagi."
+          "answer": "YesConvert menawarkan 99 alat termasuk: gabung, pisah, kompres, konversi (ke/dari gambar, teks, JSON), edit, anotasi, tanda tangan, tambah watermark, enkripsi/dekripsi, OCR, dan banyak lagi."
         },
         "merge": {
           "question": "Bisakah saya menggabungkan beberapa file PDF?",
@@ -281,7 +281,7 @@
   },
   "aboutPage": {
     "title": "Tentang {brand}",
-    "description": "{brand} adalah toolkit PDF gratis yang berfokus pada privasi yang berjalan sepenuhnya di browser Anda. Dengan {count}+ alat profesional, Anda dapat mengedit, mengonversi, menggabung, memisah, dan mengamankan file PDF Anda tanpa pernah mengunggahnya ke server.",
+    "description": "{brand} adalah toolkit PDF gratis yang berfokus pada privasi yang berjalan sepenuhnya di browser Anda. Dengan {count} alat profesional, Anda dapat mengedit, mengonversi, menggabung, memisah, dan mengamankan file PDF Anda tanpa pernah mengunggahnya ke server.",
     "mission": {
       "title": "Misi Kami",
       "p1": "Kami percaya bahwa setiap orang harus memiliki akses ke alat PDF yang kuat tanpa mengorbankan privasi mereka atau membayar biaya langganan yang mahal. Itulah sebabnya kami membuat {brand} – toolkit PDF komprehensif yang mengutamakan privasi Anda.",
@@ -329,7 +329,7 @@
     },
     "cta": {
       "title": "Siap untuk Memulai?",
-      "description": "Jelajahi {count}+ alat PDF kami dan lihat apa yang bisa dilakukan {brand} untuk Anda.",
+      "description": "Jelajahi {count} alat PDF kami dan lihat apa yang bisa dilakukan {brand} untuk Anda.",
       "button": "Lihat Semua Alat"
     }
   },
@@ -442,7 +442,7 @@
       },
       "powerful": {
         "title": "Alat yang Kuat",
-        "description": "67+ alat PDF profesional untuk semua kebutuhan Anda."
+        "description": "99 alat PDF profesional untuk semua kebutuhan Anda."
       }
     },
     "popularTools": {
@@ -452,7 +452,7 @@
     },
     "categoriesSection": {
       "title": "Jelajahi Semua Kategori Alat",
-      "description": "{count}+ alat PDF profesional yang diatur berdasarkan kategori",
+      "description": "{count} alat PDF profesional yang diatur berdasarkan kategori",
       "toolsCount": "{count} alat"
     },
     "categoriesDescription": {

@@ -6,7 +6,7 @@
     },
     "tools": {
       "title": "모든 PDF 도구",
-      "description": "67개 이상의 전문 PDF 도구를 찾아보세요. PDF 파일을 무료로 병합, 분할, 압축, 변환, 편집 및 보호하세요."
+      "description": "99개 이상의 전문 PDF 도구를 찾아보세요. PDF 파일을 무료로 병합, 분할, 압축, 변환, 편집 및 보호하세요."
     },
     "about": {
       "title": "회사 소개",
@@ -157,7 +157,7 @@
         "general": {
           "whatIs": {
             "question": "What is YesConvert?",
-            "answer": "YesConvert is a free, privacy-focused PDF toolkit that runs entirely in your browser. It offers 67+ professional tools for editing, converting, merging, splitting, and securing PDF files without uploading them to any server."
+            "answer": "YesConvert is a free, privacy-focused PDF toolkit that runs entirely in your browser. It offers 99 professional tools for editing, converting, merging, splitting, and securing PDF files without uploading them to any server."
           },
           "isFree": {
             "question": "Is YesConvert really free?",
@@ -185,7 +185,7 @@
         "features": {
           "operations": {
             "question": "What PDF operations can I perform?",
-            "answer": "YesConvert offers 67+ tools including: merge, split, compress, convert (to/from images, text, JSON), edit, annotate, sign, add watermarks, encrypt/decrypt, OCR, and many more."
+            "answer": "YesConvert offers 99 tools including: merge, split, compress, convert (to/from images, text, JSON), edit, annotate, sign, add watermarks, encrypt/decrypt, OCR, and many more."
           },
           "merge": {
             "question": "Can I merge multiple PDF files?",
@@ -221,7 +221,7 @@
         "languages": {
           "supported": {
             "question": "What languages are supported?",
-            "answer": "YesConvert is available in 9 languages: English, Japanese, Korean, Spanish, French, German, Chinese, Portuguese, and Arabic (with RTL support)."
+            "answer": "YesConvert is available in 13 languages: English, Japanese, Korean, Spanish, French, German, Chinese, Portuguese, and Arabic (with RTL support)."
           },
           "change": {
             "question": "How do I change the language?",
@@ -237,7 +237,7 @@
     },
     "aboutPage": {
       "title": "About {brand}",
-      "description": "{brand} is a free, privacy-focused PDF toolkit that runs entirely in your browser. With {count}+ professional tools, you can edit, convert, merge, split, and secure your PDF files without ever uploading them to a server.",
+      "description": "{brand} is a free, privacy-focused PDF toolkit that runs entirely in your browser. With {count} professional tools, you can edit, convert, merge, split, and secure your PDF files without ever uploading them to a server.",
       "mission": {
         "title": "Our Mission",
         "p1": "We believe that everyone should have access to powerful PDF tools without compromising their privacy or paying expensive subscription fees. That's why we created {brand} – a comprehensive PDF toolkit that puts your privacy first.",
@@ -256,7 +256,7 @@
         },
         "accessible": {
           "title": "Accessible Everywhere",
-          "description": "Available in 9 languages and works on any device with a modern browser. No installation required."
+          "description": "Available in 13 languages and works on any device with a modern browser. No installation required."
         },
         "free": {
           "title": "Free Forever",
@@ -285,7 +285,7 @@
       },
       "cta": {
         "title": "Ready to Get Started?",
-        "description": "Explore our {count}+ PDF tools and see what {brand} can do for you.",
+        "description": "Explore our {count} PDF tools and see what {brand} can do for you.",
         "button": "Browse All Tools"
       }
     },
@@ -419,7 +419,7 @@
       },
       "powerful": {
         "title": "강력한 도구",
-        "description": "모든 필요를 충족하는 67개 이상의 전문 PDF 도구."
+        "description": "모든 필요를 충족하는 99개 이상의 전문 PDF 도구."
       }
     },
     "popularTools": {
@@ -643,7 +643,7 @@
   },
   "toolsPage": {
     "title": "Professional PDF Tools",
-    "subtitle": "{count}+ free, secure, and easy-to-use tools for all your PDF needs.",
+    "subtitle": "{count} free, secure, and easy-to-use tools for all your PDF needs.",
     "filters": "Filters",
     "allTools": "All Tools",
     "clearAll": "Clear all",

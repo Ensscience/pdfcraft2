@@ -1,8 +1,10 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { locales, type Locale } from '@/lib/i18n/config';
 import { TOOL_CATEGORIES, type ToolCategory } from '@/types/tool';
 import CategoryPageClient from './CategoryPageClient';
 import { notFound } from 'next/navigation';
+import { generateBaseMetadata } from '@/lib/seo';
 
 export function generateStaticParams() {
     return locales.flatMap((locale) =>
@@ -13,18 +15,22 @@ export function generateStaticParams() {
     );
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string }> }) {
-    const { category } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string }> }): Promise<Metadata> {
+    const { locale: localeParam, category } = await params;
+    const locale = locales.includes(localeParam as Locale) ? (localeParam as Locale) : 'en';
 
     const formattedCategory = category
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 
-    return {
-        title: `${formattedCategory} Tools - PDFCraft`,
-        description: `Free online ${formattedCategory} tools. Secure, fast, and easy to use.`,
-    };
+    return generateBaseMetadata({
+        locale,
+        path: `/tools/category/${category}`,
+        title: `${formattedCategory} PDF Tools`,
+        description: `Explore free online ${formattedCategory.toLowerCase()} PDF tools from YesConvert. Process your files privately in the browser with no installation required.`,
+        keywords: [`${formattedCategory} PDF tools`, 'free PDF tools', 'online PDF tools'],
+    });
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ locale: string; category: string }> }) {

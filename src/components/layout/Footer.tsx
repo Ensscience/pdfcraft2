@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { Shield, Lock, FileCheck, Github, Twitter, Mail, Globe } from 'lucide-react';
 import { type Locale, locales, localeConfig, getLocalizedPath } from '@/lib/i18n/config';
 import { saveLanguagePreference } from './LanguageSelector';
+import { siteConfig } from '@/config/site';
 
 export interface FooterProps {
   locale: Locale;
@@ -36,27 +37,6 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
       className="w-full border-t border-[hsl(var(--color-border))] bg-[hsl(var(--color-background))] pt-16 pb-8"
       role="contentinfo"
     >
-      {/* Domain for Sale Banner */}
-      <div className="w-full bg-gradient-to-r from-[#0ea5e9] via-[#FF2800] to-[#0ea5e9] py-3 px-4 mb-8">
-        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-white text-center">
-          <div className="flex items-center gap-2 font-bold text-lg">
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
-              <line x1="7" y1="7" x2="7.01" y2="7"/>
-            </svg>
-            <span>This domain is for sale!</span>
-          </div>
-          <span className="hidden sm:block opacity-60">·</span>
-          <span className="text-sm opacity-90">Interested? Contact us at</span>
-          <a
-            href="mailto:ensscience@gmail.com"
-            className="font-semibold underline underline-offset-2 hover:opacity-80 transition-opacity text-white"
-          >
-            ensscience@gmail.com
-          </a>
-        </div>
-      </div>
-
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Column */}
@@ -88,13 +68,15 @@ export const Footer: React.FC<FooterProps> = ({ locale }) => {
             </p>
 
             <div className="flex gap-4">
-              <a href="https://github.com/YesConvertTool/pdfcraft" className="p-2 rounded-full bg-[hsl(var(--color-muted))] text-[hsl(var(--color-muted-foreground))] hover:bg-[hsl(var(--color-primary))] hover:text-white transition-all">
+              <a href={siteConfig.links.github} className="p-2 rounded-full bg-[hsl(var(--color-muted))] text-[hsl(var(--color-muted-foreground))] hover:bg-[hsl(var(--color-primary))] hover:text-white transition-all" aria-label="YesConvert on GitHub">
                 <Github className="w-4 h-4" />
               </a>
-              <a href="https://x.com/dzairprofs" className="p-2 rounded-full bg-[hsl(var(--color-muted))] text-[hsl(var(--color-muted-foreground))] hover:bg-[hsl(var(--color-primary))] hover:text-white transition-all">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="mailto:ensscience@gmail.com" className="p-2 rounded-full bg-[hsl(var(--color-muted))] text-[hsl(var(--color-muted-foreground))] hover:bg-[hsl(var(--color-primary))] hover:text-white transition-all">
+              {siteConfig.links.twitter && (
+                <a href={siteConfig.links.twitter} className="p-2 rounded-full bg-[hsl(var(--color-muted))] text-[hsl(var(--color-muted-foreground))] hover:bg-[hsl(var(--color-primary))] hover:text-white transition-all" aria-label="YesConvert on X">
+                  <Twitter className="w-4 h-4" />
+                </a>
+              )}
+              <a href="mailto:ensscience@gmail.com" className="p-2 rounded-full bg-[hsl(var(--color-muted))] text-[hsl(var(--color-muted-foreground))] hover:bg-[hsl(var(--color-primary))] hover:text-white transition-all" aria-label="Contact YesConvert">
                 <Mail className="w-4 h-4" />
               </a>
             </div>
