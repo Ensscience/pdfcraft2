@@ -16,6 +16,8 @@ import type { Tool, ToolContent } from '@/types/tool';
 export interface BaseMetadataOptions {
   locale: Locale;
   path?: string;
+  canonicalUrl?: string;
+  xDefaultUrl?: string;
 }
 
 /**
@@ -40,24 +42,31 @@ export interface ToolMetadataOptions extends BaseMetadataOptions {
 /**
  * Generate the canonical URL for a page
  */
+function normalizePath(path: string = ''): string {
+  const trimmedPath = path.trim();
+  if (!trimmedPath || trimmedPath === '/') {
+    return '';
+  }
+  return trimmedPath.startsWith('/') ? trimmedPath : `/${trimmedPath}`;
+}
+
 export function getCanonicalUrl(locale: Locale, path: string = ''): string {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return `${siteConfig.url}/${locale}${cleanPath}`;
+  return `${siteConfig.url}/${locale}${normalizePath(path)}`;
 }
 
 /**
  * Generate alternate language URLs for hreflang tags
  */
-export function getAlternateUrls(path: string = ''): Record<string, string> {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+export function getAlternateUrls(path: string = '', xDefaultUrl?: string): Record<string, string> {
+  const cleanPath = normalizePath(path);
   const alternates: Record<string, string> = {};
 
   for (const locale of locales) {
     alternates[locale] = `${siteConfig.url}/${locale}${cleanPath}`;
   }
 
-  // Add x-default pointing to English
-  alternates['x-default'] = `${siteConfig.url}/en${cleanPath}`;
+  // Use the site root for the default homepage and the English equivalent for other pages.
+  alternates['x-default'] = xDefaultUrl || `${siteConfig.url}/en${cleanPath}`;
 
   return alternates;
 }
@@ -66,13 +75,13 @@ export function getAlternateUrls(path: string = ''): Record<string, string> {
  * Generate base metadata for any page
  */
 export function generateBaseMetadata(options: PageMetadataOptions): Metadata {
-  const { locale, path = '', title, description, keywords = [], image, noIndex = false } = options;
+  const { locale, path = '', canonicalUrl: canonicalOverride, xDefaultUrl, title, description, keywords = [], image, noIndex = false } = options;
 
   const fullTitle = title.includes(siteConfig.name)
     ? title
     : `${title} | ${siteConfig.name}`;
 
-  const canonicalUrl = getCanonicalUrl(locale, path);
+  const canonicalUrl = canonicalOverride || getCanonicalUrl(locale, path);
   const ogImage = image || siteConfig.ogImage;
   const ogLocale = getOpenGraphLocale(locale);
 
@@ -104,7 +113,7 @@ export function generateBaseMetadata(options: PageMetadataOptions): Metadata {
     },
     alternates: {
       canonical: canonicalUrl,
-      languages: getAlternateUrls(path),
+      languages: getAlternateUrls(path, xDefaultUrl),
     },
     openGraph: {
       type: 'website',
@@ -128,7 +137,7 @@ export function generateBaseMetadata(options: PageMetadataOptions): Metadata {
       title: fullTitle,
       description: optimizedDescription,
       images: [ogImage.startsWith('http') ? ogImage : `${siteConfig.url}${ogImage}`],
-      creator: siteConfig.creator,
+      creator: siteConfig.seo.twitterHandle || undefined,
     },
     verification: {
       // Add verification tags if needed
@@ -144,7 +153,7 @@ export function generateBaseMetadata(options: PageMetadataOptions): Metadata {
  */
 export function generateToolMetadata(options: ToolMetadataOptions): Metadata {
   const { locale, tool, content } = options;
-  const path = `/tools/${tool.slug}`;
+  const path = options.path || `/tools/${tool.slug}`;
 
   // Enhance keywords with common PDF-related terms
   const enhancedKeywords = [
@@ -169,7 +178,11 @@ export function generateToolMetadata(options: ToolMetadataOptions): Metadata {
 /**
  * Generate metadata for the homepage
  */
-export function generateHomeMetadata(locale: Locale, translations?: { title: string; description: string }): Metadata {
+export function generateHomeMetadata(
+  locale: Locale,
+  translations?: { title: string; description: string },
+  metadataOptions: Pick<BaseMetadataOptions, 'canonicalUrl' | 'xDefaultUrl'> = {}
+): Metadata {
   const defaultTitle = `${siteConfig.name} - Professional PDF Tools`;
   const defaultDescription = siteConfig.description;
 
@@ -179,6 +192,7 @@ export function generateHomeMetadata(locale: Locale, translations?: { title: str
     title: translations?.title || defaultTitle,
     description: translations?.description || defaultDescription,
     keywords: ['PDF tools', 'merge PDF', 'split PDF', 'compress PDF', 'convert PDF', 'free PDF tools', 'online PDF editor'],
+    ...metadataOptions,
   });
 }
 
@@ -190,7 +204,7 @@ export function generateToolsListMetadata(locale: Locale, translations?: { title
     locale,
     path: '/tools',
     title: translations?.title || 'All PDF Tools',
-    description: translations?.description || 'Browse all 67+ professional PDF tools. Merge, split, compress, convert, edit, and secure your PDF files for free.',
+    description: translations?.description || 'Browse all 99 professional PDF tools. Merge, split, compress, convert, edit, and secure your PDF files for free.',
     keywords: ['PDF tools', 'all PDF tools', 'PDF editor', 'PDF converter', 'PDF merger', 'PDF splitter'],
   });
 }
