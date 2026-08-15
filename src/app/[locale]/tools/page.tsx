@@ -47,6 +47,7 @@ export default async function ToolsPage({ params }: ToolsPageProps) {
   // Get localized content for tools
   const { tools } = await import('@/config/tools');
   const { getToolContent } = await import('@/config/tool-content');
+  const activeTools = tools.filter((tool) => !tool.disabled);
 
   const localizedToolContent = tools.reduce((acc, tool) => {
     const content = getToolContent(locale as Locale, tool.id);
@@ -62,8 +63,21 @@ export default async function ToolsPage({ params }: ToolsPageProps) {
   // Note: searchParams are handled client-side in ToolsPageClient
   // because static export doesn't support server-side searchParams
   return (
-    <Suspense fallback={<ToolsPageFallback />}>
-      <ToolsPageClient locale={locale as Locale} localizedToolContent={localizedToolContent} />
-    </Suspense>
+    <>
+      <nav className="sr-only" aria-label="All PDF tools">
+        <ul>
+          {activeTools.map((tool) => (
+            <li key={tool.id}>
+              <a href={`/${locale}/tools/${tool.slug}`}>
+                {localizedToolContent[tool.id]?.title || tool.slug}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <Suspense fallback={<ToolsPageFallback />}>
+        <ToolsPageClient locale={locale as Locale} localizedToolContent={localizedToolContent} />
+      </Suspense>
+    </>
   );
 }
